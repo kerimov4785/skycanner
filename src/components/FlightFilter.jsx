@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from 'react'
-import { FaArrowsRotate, FaRotate } from "react-icons/fa6";
+import { FaArrowsRotate, FaAtlassian, FaRotate } from "react-icons/fa6";
 import { FaAngleDown, FaAngleUp, FaArrowRight, } from 'react-icons/fa'
 import { IoIosCloseCircle } from "react-icons/io";
 import DatePicker1 from './DatePicker1';
@@ -12,6 +12,7 @@ import MobileFrom from './MobileFrom';
 import MobileTo from './MobileTo';
 import MobileDate from './MobileDate';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export function getMonthName(monthNumber) {
     const date = new Date();
@@ -69,6 +70,8 @@ function FlightFilter() {
 
     let navigate = useNavigate()
 
+    document.body.style.overflow = mobileFrom || mobileTo || mobileDate ? 'hidden' : 'auto'
+
     window.onclick = function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
             setDatePicker1(false)
@@ -92,44 +95,6 @@ function FlightFilter() {
         setFromPlace(toPlace)
         setToPlace(fromPlace)
     }
-
-    // function search() {
-    //     if (tripType == 'Туда-обратно') {
-    //         if (fromPlace && toPlace && date1 != 'Добавьте дату' && date2 != 'Добавьте дату') {
-    //             setSearchTicket({
-    //                 fromCountry: fromPlace,
-    //                 toCountry: toPlace,
-    //                 firstDate: date1,
-    //                 secondDate: date2,
-    //                 fromCity: fromCity,
-    //                 toCity: toCity
-    //             })
-    //             if(!toCity){
-    //                 navigate(`/flights/transport`)
-    //             }
-    //         }
-    //         else {
-    //             toast.error('Fill')
-    //         }
-    //     } else {
-    //         if (fromPlace && toPlace && date1 != 'Добавьте дату') {
-    //             setSearchTicket({
-    //                 fromCountry: fromPlace,
-    //                 toCountry: toPlace,
-    //                 firstDate: date1,
-    //                 secondDate: '',
-    //                 fromCity: fromCity,
-    //                 toCity: toCity
-    //             })
-    //             if(!toCity){
-    //                 navigate("/flights/transport")
-    //             }
-    //         }
-    //         else {
-    //             toast.error('Fill')
-    //         }
-    //     }
-    // }
     function search() {
         if (tripType == 'Туда-обратно') {
             if (fromPlace && toPlace && date1 != 'Добавьте дату' && date2 != 'Добавьте дату') {
