@@ -70,7 +70,9 @@ function FlightFilter() {
 
     let navigate = useNavigate()
 
-    document.body.style.overflow =( mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
+    useEffect(() => {
+        document.body.style.overflow =(mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
+    },[mobileFrom,mobileDate,mobileTo])
 
     window.onclick = function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
