@@ -12,8 +12,7 @@ function MobileDate({ setMobileDate }) {
     let [date2IsActive, setDate2IsActive] = useState(false)
     function handleChange(newValue) {
         if (((date2.$M < newValue.$M) || (date2.$M == newValue.$M && date2.$D <= newValue.$D)) && tripType == 'Туда-обратно') {
-            toast.error('Select date earlier than the return date')
-            return
+            setDate2('Добавьте дату')
         }
         if (tripType == 'В одну сторону') {
             setDate1(newValue)
@@ -44,7 +43,7 @@ function MobileDate({ setMobileDate }) {
                 <FaChevronLeft onClick={() => setMobileTypeStatus(false)} />
                 <h3>Тип поездки</h3>
                 <div >
-                    <p onClick={() => (setTripType('В одну сторону'), setMobileTypeStatus(false),setDate1IsActive(true),setDate2IsActive(false))}>В одну сторону <FaArrowRight /> </p>
+                    <p onClick={() => (setTripType('В одну сторону'), setMobileTypeStatus(false), setDate1IsActive(true), setDate2IsActive(false))}>В одну сторону <FaArrowRight /> </p>
                     <p onClick={() => (setTripType('Туда-обратно'), setMobileTypeStatus(false))}>Туда-обратно<FaRotate /> </p>
                 </div>
             </div> : null}

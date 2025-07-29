@@ -3,9 +3,10 @@ import { AllContext } from '../context/DataContext'
 import { getMonthName } from '../components/FlightFilter'
 import Card from '../components/Card'
 import { useLocation, useNavigate } from 'react-router-dom'
+import Loader from '../components/Loader'
 
 function Transport() {
-  let { flights, tripType } = useContext(AllContext)
+  let { flights } = useContext(AllContext)
   const location = useLocation();
   const params = new URLSearchParams(location.search)
   let fromCountry = params.get('from')
@@ -16,24 +17,28 @@ function Transport() {
   let toCity = params.get('toCity')
 
   let cityFlights
-  if (toCountry == 'Везьде') {
-    cityFlights = flights?.flatMap(item => item)
+  if (fromCountry == 'Azerbaijan') {
+    if (toCountry == 'Везьде') {
+      cityFlights = flights.flatMap(item => item)
+    }
+    else if(flights.some(item => item.country == toCountry)){
+      cityFlights = flights.find(item => (item.country == toCountry))
+    }
   }
   else {
-    cityFlights = flights?.find(item => (item.country == toCountry
-      && fromCountry == 'Azerbaijan'))
+    cityFlights = []
   }
-  if (!cityFlights) {
-    return 'salam'
-  }
+
   const firstDay = firstDate.slice(8, 10);
   const firstMonth = +firstDate.slice(5, 7);
   const secondDay = secondDate.slice(8, 10);
   const secondMonth = +secondDate.slice(5, 7);
+  console.log(cityFlights);
 
+  const allFlights = cityFlights.length != 0 ? toCountry == 'Везьде' ? cityFlights.flatMap(item => item.cities.filter(item => filterCity(item))) : cityFlights.cities.filter(item => filterCity(item)) : []
 
   function filterCity(item) {
-    if (tripType == 'В одну сторону') {
+    if (secondDate == '') {
       return item.flights.some(item => item.departure.slice(8, 10) == firstDay
         && item.roundTrip
         && item.departure.slice(5, 7) == firstMonth)
@@ -58,9 +63,9 @@ function Transport() {
           }
           <div className='allCity'>
             {
-              toCountry == 'Везьде'
-                ? cityFlights.map(item => item.cities.filter(item => filterCity(item)).map((item2, i) => <Card key={i} city={item2} />)).slice(1)
-                : cityFlights.cities.filter(item => filterCity(item)).map((item, i) => <Card key={i} city={item} />)
+              allFlights.length != 0 ?
+                allFlights.map((item2, i) => <Card key={i} city={item2} />)
+                : <div className='none' ><h3>No flights found for these requests :(</h3></div>
             }
           </div>
         </div>

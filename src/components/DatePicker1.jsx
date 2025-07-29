@@ -4,12 +4,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import toast from 'react-hot-toast';
 
-function DatePicker1({tripType, date1, date2, setDate1, setDatePicker1 }) {
+function DatePicker1({tripType, date1, date2, setDate1,setDate2, setDatePicker1 }) {
 
     function handleChange(newValue) {
         if (((date2.$M < newValue.$M) || (date2.$M == newValue.$M && date2.$D <= newValue.$D )) && tripType == 'Туда-обратно' ) {
-            toast.error('Select date earlier than the return date')
-            return
+            setDate2('Добавьте дату')
         }
         setDate1(newValue)
     };

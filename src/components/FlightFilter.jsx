@@ -13,6 +13,7 @@ import MobileTo from './MobileTo';
 import MobileDate from './MobileDate';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Loader from './Loader';
 
 export function getMonthName(monthNumber) {
     const date = new Date();
@@ -70,9 +71,9 @@ function FlightFilter() {
 
     let navigate = useNavigate()
 
-    useEffect(() => {
-        document.body.style.overflow =(mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
-    },[mobileFrom,mobileDate,mobileTo])
+    // useEffect(() => {
+    //     document.body.style.overflow =(mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
+    // },[mobileFrom,mobileDate,mobileTo])
 
     window.onclick = function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
@@ -114,6 +115,7 @@ function FlightFilter() {
             }
         }
     }
+
     return (
         <>
             {mobileFrom && window.innerWidth <= 768 ? <MobileFrom setMobileFrom={setMobileFrom} toPlace={toPlace} setFromCity={setFromCity} setFromPickerStatus={setFromPickerStatus} setFromPlace={setFromPlace} /> : null}
@@ -150,7 +152,7 @@ function FlightFilter() {
                             <div ref={date1Box} onClick={() => (setDatePicker1(true), setMobileDate(true))} className='filter-box'>
                                 <p ref={date1P} >Туда</p>
                                 <h5 ref={date1H5} >{date1 == 'Добавьте дату' ? date1 : tripType == 'Туда-обратно' && date2 != 'Добавьте дату' && window.innerWidth <= 768 ? `${date1?.format('DD')} ${getMonthName(date1.format('MM'))} - ${date2?.format('DD')} ${getMonthName(date2.format('MM'))}` : date1?.format('YYYY-MM-DD')}</h5>
-                                {datePicker1 && window.innerWidth > 768 ? <DatePicker1 tripType={tripType} date1={date1} date2={date2} setDate1={setDate1} setDatePicker1={setDatePicker1} /> : null}
+                                {datePicker1 && window.innerWidth > 768 ? <DatePicker1 tripType={tripType} date1={date1} date2={date2} setDate1={setDate1} setDate2={setDate2} setDatePicker1={setDatePicker1} /> : null}
                             </div>
                             <div ref={date2Box} onClick={() => setDatePicker2(true)} style={{ display: tripType == 'В одну сторону' ? 'none' : 'block' }} className='filter-box' >
                                 <p ref={date2P} >Обратно</p>
