@@ -11,10 +11,10 @@ function Transport() {
   let fromCountry = params.get('from')
   let toCountry = params.get('to')
   let firstDate = params.get('date1')
-  let secondDate = params.get('date2')
+  let secondDate = params.get('date2') ? params.get('date2') : ''
   let fromCity = params.get('fromCity')
   let toCity = params.get('toCity')
-  
+
   let cityFlights
   if (toCountry == 'Везьде') {
     cityFlights = flights?.flatMap(item => item)

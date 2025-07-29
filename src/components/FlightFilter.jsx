@@ -140,7 +140,7 @@ function FlightFilter() {
             }
         } else {
             if (fromPlace && toPlace && date1 != 'Добавьте дату') {
-                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1}&date2=''&fromCity=${fromCity}&toCity=${toCity}`)
+                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
             }
             else {
                 toast.error('Fill')
