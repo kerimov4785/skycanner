@@ -320,8 +320,9 @@ footer h3 {
     font: 400 13px 'Inter';
 }
 
+
 #fl-bg {
-    background: url(../src/assets/imagebg-flights.png);
+    background: url(../public/assets/imagebg-flights.png);
     display: flex;
     justify-content: center;
     align-items: center;
