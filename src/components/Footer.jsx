@@ -23,7 +23,7 @@ function Footer() {
           </div>
           <div id='f-col3' >
             <div>
-              <p onClick={() => setStatus({ ...status,'1': !status['1'] })} >Подробнее</p>
+              <p onClick={() => setStatus({ ...status, '1': !status['1'] })} >Подробнее</p>
               {status['1'] ? <FaAngleUp size={16} /> : <FaAngleDown size={16} />}
               <div style={status['1'] ? blockStyle : noneStyle} >
                 <div><p>Внутренние рейсы</p></div>
@@ -37,7 +37,7 @@ function Footer() {
                 <div><p>Отели</p></div>
               </div>
             </div>
-            <div onClick={() => setStatus({ ...status,'2': !status['2'] })} >
+            <div onClick={() => setStatus({ ...status, '2': !status['2'] })} >
               <p>О нас</p>
               {status['2'] ? <FaAngleUp size={16} /> : <FaAngleDown size={16} />}
               <div style={status['2'] ? blockStyle : noneStyle}>
@@ -50,7 +50,7 @@ function Footer() {
                 <div><p>Вакансии</p></div>
               </div>
             </div>
-            <div onClick={() => setStatus({ ...status,'3': !status['3'] })} >
+            <div onClick={() => setStatus({ ...status, '3': !status['3'] })} >
               <p>Партнерам</p>
               {status['3'] ? <FaAngleUp size={16} /> : <FaAngleDown size={16} />}
               <div style={status['3'] ? blockStyle : noneStyle}>
@@ -61,7 +61,7 @@ function Footer() {
                 <div><p>API</p></div>
               </div>
             </div>
-            <div onClick={() => setStatus({ ...status,'4': !status['4'] })} >
+            <div onClick={() => setStatus({ ...status, '4': !status['4'] })} >
               <p>Поездки</p>
               {status['4'] ? <FaAngleUp size={16} /> : <FaAngleDown size={16} />}
               <div style={status['4'] ? blockStyle : noneStyle}>
@@ -70,7 +70,7 @@ function Footer() {
                 <div><p>Прокат автомобилей</p></div>
               </div>
             </div>
-            <div onClick={() => setStatus({ ...status,'5': !status['5'] })} >
+            <div onClick={() => setStatus({ ...status, '5': !status['5'] })} >
               <p>Международные сайты</p>
               {status['5'] ? <FaAngleUp size={16} /> : <FaAngleDown size={16} />}
               <div style={status['5'] ? blockStyle : noneStyle}>
@@ -79,8 +79,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <h4>Сравнивайте цены и бронируйте дешевые авиабилеты с помощью Skyscanner</h4>
-      <h3>© Skyscanner Ltd 2002–2025</h3>
+      <div className="container">
+        <h4>Сравнивайте цены и бронируйте дешевые авиабилеты с помощью Skyscanner</h4>
+        <h3>© Skyscanner Ltd 2002–2025</h3>
+      </div>
     </footer>
   )
 }
