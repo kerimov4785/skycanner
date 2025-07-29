@@ -58,16 +58,23 @@ function Main() {
                 <main>
                     <div className="links">
                         <Link>
-                            <BiHotel color='white' size={25} />
-                            <p>Отели</p>
+                            <div>
+                                <BiHotel color='white' size={25} />
+                                <p>Отели</p>
+                            </div>
                         </Link>
                         <Link>
-                            <IoCarSharp color='white' size={25} />
-                            <p>Прокат автомобилей</p>
+                            <div>
+                                <IoCarSharp color='white' size={25} />
+                                <p>Прокат автомобилей</p>
+                            </div>
                         </Link>
                         <Link>
-                            <MdFlight color='white' size={25} />
-                            <p>Поиск везьде</p>
+                            <div>
+
+                                <MdFlight color='white' size={25} />
+                                <p>Поиск везьде</p>
+                            </div>
                         </Link>
                     </div>
                     <div className='main-img' >

@@ -8,6 +8,7 @@
     margin: auto;
     padding: 0 20px;
 }
+
 /* header */
 .header-bg {
     background-color: var(--darkblue);
@@ -17,7 +18,8 @@
     padding: 20px 20px;
 }
 
-header>div>svg , header > div > a {
+header>div>svg,
+header>div>a {
     width: 173px;
 }
 
@@ -59,9 +61,13 @@ nav {
     display: flex;
     gap: 5px;
 }
-nav::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
+
+nav::-webkit-scrollbar,
+.links::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
 nav a {
     display: flex;
     gap: 4px;
@@ -91,11 +97,15 @@ main {
 .links {
     display: flex;
     gap: 20px;
+    overflow-y: scroll;
 }
 
 .links a {
-    display: flex;
     flex: 1;
+}
+
+.links a div {
+    display: flex;
     gap: 18px;
     color: white;
     align-items: center;
@@ -106,7 +116,7 @@ main {
     transition: .3s;
 }
 
-.links a:hover {
+.links a div:hover {
     background-color: #1a4a7e;
 }
 
@@ -388,7 +398,8 @@ footer h3 {
     background-color: white;
 }
 
-.typeDropdown>p , .mobileTypeDropdown p {
+.typeDropdown>p,
+.mobileTypeDropdown p {
     position: relative;
     font: 400 15px 'Inter';
     padding: 10px 10px 10px 40px;
@@ -398,7 +409,8 @@ footer h3 {
     background-color: #ebebeb;
 }
 
-.typeDropdown svg , .mobileTypeDropdown svg {
+.typeDropdown svg,
+.mobileTypeDropdown svg {
     position: absolute;
     left: 10px;
     top: 50%;
@@ -607,9 +619,11 @@ footer h3 {
     padding: 16px 20px;
     cursor: pointer;
 }
-.allCountryButton{
+
+.allCountryButton {
     padding: 20px !important;
 }
+
 .fromDropdown>div:hover,
 .fromMobileCountry>div:hover {
     background-color: #eff3f8;
@@ -764,7 +778,7 @@ footer h3 {
     line-height: 25px;
 }
 
-.header-filter > .filterFlight  {
+.header-filter>.filterFlight {
     display: none;
 }
 
@@ -783,7 +797,7 @@ footer h3 {
 
 .mobileFrom>h3,
 .mobileDate>h3,
-.mobileTypeDropdown > h3 {
+.mobileTypeDropdown>h3 {
     text-align: center;
     margin: 20px;
     font: 600 15px 'Inter';
@@ -791,7 +805,7 @@ footer h3 {
 
 .mobileFrom>svg,
 .mobileDate>svg,
-.mobileTypeDropdown > svg {
+.mobileTypeDropdown>svg {
     position: absolute;
     top: 22px;
     left: 25px;
@@ -858,7 +872,8 @@ footer h3 {
     padding: 0 25px !important;
     background-color: white;
 }
-.mobileTypeDropdown{
+
+.mobileTypeDropdown {
     position: fixed;
     z-index: 7;
     bottom: 0;
@@ -869,6 +884,7 @@ footer h3 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 .mobileDateInputs {
     display: flex;
     gap: 5px;
@@ -887,13 +903,15 @@ footer h3 {
     font: 600 14px 'Inter';
     color: #626971;
 }
-.mobileDateInputs h5{
+
+.mobileDateInputs h5 {
     color: #05203c;
     font: 400 15px 'Inter';
     margin-top: 6px;
 
 }
-.deleteInp{
+
+.deleteInp {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -902,7 +920,7 @@ footer h3 {
 }
 
 /* transportFilter */
-.transportFilter{
+.transportFilter {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -916,21 +934,24 @@ footer h3 {
 }
 
 /* citiesSection */
-.bg-city{
+.bg-city {
     background-color: #eff3f8;
     padding: 30px 0;
 }
-.citiesSection > h2 {
+
+.citiesSection>h2 {
     font: 600 30px 'Inter';
     color: #0c0c0c;
 }
-.allCity{
+
+.allCity {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
-.cityCard{
+
+.cityCard {
     cursor: pointer;
     flex: 1;
     min-width: 312px;
@@ -941,36 +962,46 @@ footer h3 {
     transition: .5s;
     overflow: hidden;
 }
-.cityCard:hover{
+
+.cityCard:hover {
     box-shadow: 0 3px 8px 0 #25201f81;
 }
+
 .cityCard img {
     height: 170px;
     width: 100%;
     object-fit: cover;
 }
-.cityCard > div{
+
+.cityCard>div {
     padding: 20px 15px;
 }
-.cityCard > div > div {
+
+.cityCard>div>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
 
 }
-.cityCard h3,.cityCard p{
+
+.cityCard h3,
+.cityCard p {
     font: 600 18px 'Inter';
 }
-.cityCard p{
+
+.cityCard p {
     line-height: 18px;
 }
-.cityCard h4{
+
+.cityCard h4 {
     font: 700 14px 'Inter';
 }
-.cityCard span{
+
+.cityCard span {
     font-weight: 400;
 }
+
 @media only screen and (max-width: 1210px) {
     .filterFlight {
         width: 100%;
@@ -1000,23 +1031,35 @@ footer h3 {
         flex: 1;
     }
 
-    .footer,.footer>div:last-child{
+    .footer,
+    .footer>div:last-child,
+    .question-box {
         flex-direction: column;
     }
-    .footer>div:last-child{
+
+    .question-box {
+        gap: 0;
+    }
+
+    .footer>div:last-child {
         gap: 20px;
     }
-    .footer>div:last-child>div{
+
+    .footer>div:last-child>div {
         width: 100%;
     }
-    #lang{
+
+    #lang {
         width: 100%;
         margin-bottom: 20px;
     }
-    footer h4,footer h3{
+
+    footer h4,
+    footer h3 {
         text-align: start;
     }
-    footer h4{
+
+    footer h4 {
         margin-bottom: 7px;
     }
 }
@@ -1034,7 +1077,7 @@ footer h3 {
         width: 75px;
     }
 
-     
+
 }
 
 @media only screen and (max-width:768px) {
@@ -1042,6 +1085,16 @@ footer h3 {
     .filterFlight>div:nth-child(2) {
         flex-direction: column;
     }
+
+    .links a div {
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        min-width: 120px;
+        height: 108px;
+        padding: 15px;
+    }
+
 
     .filterFlight>div:nth-child(2)>div:first-child {
         width: 100%;
@@ -1104,30 +1157,59 @@ footer h3 {
         right: 20px;
         transform: translateY(calc(50% - 3px))
     }
-    .adviceBox2{
+
+    .adviceBox2 {
         flex-direction: column;
     }
+
+    .main-img {
+        height: 600px;
+    }
+
+    .main-img {
+        padding: 30px 0 0 30px;
+        justify-content: start;
+    }
 }
+
 @media only screen and (max-width:540px) {
-    .adviceBox{
+    .adviceBox {
         flex-direction: column;
         gap: 30px;
     }
-    .flightQuestionSection h2{
+
+    .flightQuestionSection h2 {
         font-size: 24px;
     }
-    .question h3{
+
+    .question h3 {
         font-size: 15px;
         padding-right: 30px;
     }
-    .adviceBox3{
+
+    .adviceBox3 {
         flex-direction: column;
     }
-    .transportFilter{
+
+    .transportFilter {
         flex-direction: column;
         gap: 0;
         font-size: 14px;
         align-items: center;
         padding: 12px 20px;
-}
+    }
+
+    .main-img button {
+        display: none;
+    }
+
+    .main-img h2 {
+        font-size: 34px;
+        line-height: 34px;
+        width: 100%;
+    }
+
+    .main-img p {
+        font-size: 16px;
+    }
 }
