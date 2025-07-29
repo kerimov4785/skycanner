@@ -10,7 +10,7 @@ function Card({ city }) {
     
     return (
         <div className='cityCard' >
-            <img src={`../src/assets/${city.image}`} alt="" />
+            <img src={`../public/assets/${city.image}`} alt="" />
             <div>
                 <h3>{city.name}</h3>
                 <div>

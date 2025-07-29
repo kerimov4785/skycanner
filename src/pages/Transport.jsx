@@ -14,9 +14,7 @@ function Transport() {
   let secondDate = params.get('date2')
   let fromCity = params.get('fromCity')
   let toCity = params.get('toCity')
-
-  console.log(toCity);
-
+  
   let cityFlights
   if (toCountry == 'Везьде') {
     cityFlights = flights?.flatMap(item => item)
