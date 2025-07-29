@@ -1,0 +1,2395 @@
+{
+  "Allflights": [
+    {
+    "country": "Azerbaijan",
+    "title": "(AZ)",
+    "cities": [
+      {
+        "name": "Baku",
+        "flights": [
+          {
+            "id": 197,
+            "from": "Istanbul",
+            "to": "Baku",
+            "departure": "2025-08-01T08:00",
+            "arrival": "2025-08-01T11:00",
+            "price": 150,
+            "airline": "Azerbaijan Airlines"
+          },
+          {
+            "id": 198,
+            "from": "Moscow",
+            "to": "Baku",
+            "departure": "2025-08-05T10:00",
+            "arrival": "2025-08-05T13:00",
+            "price": 180,
+            "airline": "Azerbaijan Airlines",
+            "roundTrip": {
+              "departure": "2025-08-12T14:00",
+              "arrival": "2025-08-12T17:00"
+            }
+          },
+          {
+            "id": 199,
+            "from": "Dubai",
+            "to": "Baku",
+            "departure": "2025-08-10T12:00",
+            "arrival": "2025-08-10T15:00",
+            "price": 220,
+            "airline": "Flydubai"
+          },
+          {
+            "id": 200,
+            "from": "London",
+            "to": "Baku",
+            "departure": "2025-08-15T09:00",
+            "arrival": "2025-08-15T14:00",
+            "price": 280,
+            "airline": "British Airways",
+            "roundTrip": {
+              "departure": "2025-08-22T15:00",
+              "arrival": "2025-08-22T20:00"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ganja",
+        "flights": [
+          {
+            "id": 201,
+            "from": "Istanbul",
+            "to": "Ganja",
+            "departure": "2025-08-03T11:00",
+            "arrival": "2025-08-03T14:00",
+            "price": 160,
+            "airline": "Turkish Airlines"
+          },
+          {
+            "id": 202,
+            "from": "Moscow",
+            "to": "Ganja",
+            "departure": "2025-08-08T13:00",
+            "arrival": "2025-08-08T16:00",
+            "price": 190,
+            "airline": "Azerbaijan Airlines"
+          }
+        ]
+      }
+    ],
+    "id": "a1b2"
+  },
+    {
+      "country": "Kazakhstan",
+      "title":"(KZ)",
+      "cities": [
+        {
+          "name": "Almaty",
+          "image":"almaty.png",
+          "flights": [
+            {
+              "id": 1,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 220,
+              "airline": "Air Astana"
+            },
+            {
+              "id": 2,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 350,
+              "airline": "Qazaq Air",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 3,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 210,
+              "airline": "Scat Airlines"
+            },
+            {
+              "id": 4,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 340,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T09:00",
+                "arrival": "2025-08-20T13:00"
+              }
+            },
+            {
+              "id": 101,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 230,
+              "airline": "Scat Airlines"
+            },
+            {
+              "id": 102,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 360,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 103,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 215,
+              "airline": "Qazaq Air"
+            },
+            {
+              "id": 104,
+              "from": "Baku",
+              "to": "Almaty",
+              "departure": "2025-08-05T10:00",
+              "arrival": "2025-08-05T14:00",
+              "price": 330,
+              "airline": "Scat Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T11:00",
+                "arrival": "2025-08-20T15:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Astana",
+          "image":"astana.png",
+          "flights": [
+            {
+              "id": 5,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 250,
+              "airline": "Scat Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 6,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T09:30",
+              "arrival": "2025-08-10T13:30",
+              "price": 380,
+              "airline": "Air Astana"
+            },
+            {
+              "id": 7,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 220,
+              "airline": "Qazaq Air"
+            },
+            {
+              "id": 8,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 350,
+              "airline": "Scat Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 105,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 240,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 106,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 370,
+              "airline": "Qazaq Air"
+            },
+            {
+              "id": 107,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 225,
+              "airline": "Scat Airlines"
+            },
+            {
+              "id": 108,
+              "from": "Baku",
+              "to": "Astana",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 340,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T10:00",
+                "arrival": "2025-08-20T14:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Shymkent",
+          "image":"shymkent.png",
+          "flights": [
+            {
+              "id": 9,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 210,
+              "airline": "Qazaq Air"
+            },
+            {
+              "id": 10,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 340,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T09:00",
+                "arrival": "2025-08-20T13:00"
+              }
+            },
+            {
+              "id": 11,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 215,
+              "airline": "Scat Airlines"
+            },
+            {
+              "id": 12,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 330,
+              "airline": "Qazaq Air",
+              "roundTrip": {
+                "departure": "2025-08-20T10:00",
+                "arrival": "2025-08-20T14:00"
+              }
+            },
+            {
+              "id": 109,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 205,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T16:00"
+              }
+            },
+            {
+              "id": 110,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 320,
+              "airline": "Scat Airlines"
+            },
+            {
+              "id": 111,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 225,
+              "airline": "Qazaq Air"
+            },
+            {
+              "id": 112,
+              "from": "Baku",
+              "to": "Shymkent",
+              "departure": "2025-08-03T11:00",
+              "arrival": "2025-08-03T15:00",
+              "price": 335,
+              "airline": "Air Astana",
+              "roundTrip": {
+                "departure": "2025-08-20T09:00",
+                "arrival": "2025-08-20T13:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "0fd9"
+    },
+    {
+      "country": "Turkey",
+      "title":"(TR)",
+      "cities": [
+        {
+          "name": "Istanbul",
+          "image":"istanbul.png",
+          "flights": [
+            {
+              "id": 13,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 180,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 14,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 290,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 15,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T06:00",
+              "arrival": "2025-08-10T09:00",
+              "price": 200,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 16,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 310,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 113,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 190,
+              "airline": "Turkish Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T10:00",
+                "arrival": "2025-08-20T13:00"
+              }
+            },
+            {
+              "id": 114,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 280,
+              "airline": "Pegasus Airlines"
+            },
+            {
+              "id": 115,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 195,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 116,
+              "from": "Baku",
+              "to": "Istanbul",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 300,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ankara",
+          "image":"ankara.png",
+          "flights": [
+            {
+              "id": 17,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 190,
+              "airline": "Turkish Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T16:00"
+              }
+            },
+            {
+              "id": 18,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 280,
+              "airline": "Pegasus Airlines"
+            },
+            {
+              "id": 19,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 195,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 20,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 290,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 117,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 185,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 118,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 275,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 119,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 200,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 120,
+              "from": "Baku",
+              "to": "Ankara",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 285,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Izmir",
+          "image":"izmir.png",
+          "flights": [
+            {
+              "id": 21,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 170,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 22,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 260,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T15:00"
+              }
+            },
+            {
+              "id": 23,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 180,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 24,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 270,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 121,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 175,
+              "airline": "Turkish Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T11:00",
+                "arrival": "2025-08-20T14:00"
+              }
+            },
+            {
+              "id": 122,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 255,
+              "airline": "Pegasus Airlines"
+            },
+            {
+              "id": 123,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 185,
+              "airline": "Turkish Airlines"
+            },
+            {
+              "id": 124,
+              "from": "Baku",
+              "to": "Izmir",
+              "departure": "2025-08-03T16:00",
+              "arrival": "2025-08-03T19:00",
+              "price": 265,
+              "airline": "Pegasus Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "d338"
+    },
+    {
+      "country": "Russia",
+      "title":"(RU)",
+      "cities": [
+        {
+          "name": "Moscow",
+          "image":"moscow.png",
+          "flights": [
+            {
+              "id": 25,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T06:00",
+              "arrival": "2025-08-10T09:00",
+              "price": 190,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 26,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 320,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T15:00"
+              }
+            },
+            {
+              "id": 27,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 200,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 28,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 310,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 125,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 195,
+              "airline": "Aeroflot",
+              "roundTrip": {
+                "departure": "2025-08-20T11:00",
+                "arrival": "2025-08-20T14:00"
+              }
+            },
+            {
+              "id": 126,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 305,
+              "airline": "S7 Airlines"
+            },
+            {
+              "id": 127,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 205,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 128,
+              "from": "Baku",
+              "to": "Moscow",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 315,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "St. Petersburg",
+          "image":"petersburg.png",
+          "flights": [
+            {
+              "id": 29,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 185,
+              "airline": "Aeroflot",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 30,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 300,
+              "airline": "S7 Airlines"
+            },
+            {
+              "id": 31,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 195,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 32,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 290,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 129,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 180,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 130,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 295,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T16:00"
+              }
+            },
+            {
+              "id": 131,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 200,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 132,
+              "from": "Baku",
+              "to": "St. Petersburg",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 285,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Sochi",
+          "image":"sochi.png",
+          "flights": [
+            {
+              "id": 33,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 170,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 34,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 260,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 35,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 180,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 36,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 270,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 133,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 175,
+              "airline": "Aeroflot",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 134,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 255,
+              "airline": "S7 Airlines"
+            },
+            {
+              "id": 135,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 185,
+              "airline": "Aeroflot"
+            },
+            {
+              "id": 136,
+              "from": "Baku",
+              "to": "Sochi",
+              "departure": "2025-08-03T15:00",
+              "arrival": "2025-08-03T18:00",
+              "price": 265,
+              "airline": "S7 Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "7f4c"
+    },
+    {
+      "country": "Germany",
+      "title":"(DE)",
+      "cities": [
+        {
+          "name": "Berlin",
+          "image":"berlin.png",
+          "flights": [
+            {
+              "id": 37,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 230,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 38,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 360,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 39,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 220,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 40,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 350,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 137,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 235,
+              "airline": "Lufthansa",
+              "roundTrip": {
+                "departure": "2025-08-20T09:00",
+                "arrival": "2025-08-20T13:00"
+              }
+            },
+            {
+              "id": 138,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 355,
+              "airline": "Eurowings"
+            },
+            {
+              "id": 139,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 225,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 140,
+              "from": "Baku",
+              "to": "Berlin",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 345,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Munich",
+          "image":"munich.png",
+          "flights": [
+            {
+              "id": 41,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 240,
+              "airline": "Lufthansa",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 42,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 370,
+              "airline": "Eurowings"
+            },
+            {
+              "id": 43,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 225,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 44,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 355,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            },
+            {
+              "id": 141,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 245,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 142,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 365,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 143,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 230,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 144,
+              "from": "Baku",
+              "to": "Munich",
+              "departure": "2025-08-02T16:00",
+              "arrival": "2025-08-02T20:00",
+              "price": 350,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Frankfurt",
+          "image":"frankfurt.png",
+          "flights": [
+            {
+              "id": 45,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 225,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 46,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 365,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 47,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 230,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 48,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 350,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 145,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 220,
+              "airline": "Lufthansa",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 146,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 360,
+              "airline": "Eurowings"
+            },
+            {
+              "id": 147,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 235,
+              "airline": "Lufthansa"
+            },
+            {
+              "id": 148,
+              "from": "Baku",
+              "to": "Frankfurt",
+              "departure": "2025-08-03T17:00",
+              "arrival": "2025-08-03T21:00",
+              "price": 355,
+              "airline": "Eurowings",
+              "roundTrip": {
+                "departure": "2025-08-20T19:00",
+                "arrival": "2025-08-20T23:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "c8c5"
+    },
+    {
+      "country": "France",
+      "title":"(FR)",
+      "cities": [
+        {
+          "name": "Paris",
+          "image":"paris.png",
+          "flights": [
+            {
+              "id": 49,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 240,
+              "airline": "Air France"
+            },
+            {
+              "id": 50,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 370,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 51,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 230,
+              "airline": "Air France"
+            },
+            {
+              "id": 52,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 360,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 149,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 235,
+              "airline": "Air France"
+            },
+            {
+              "id": 150,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 365,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 151,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 245,
+              "airline": "Air France"
+            },
+            {
+              "id": 152,
+              "from": "Baku",
+              "to": "Paris",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 355,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Lyon",
+          "image":"lyon.png",
+          "flights": [
+            {
+              "id": 53,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 220,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T16:00"
+              }
+            },
+            {
+              "id": 54,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 350,
+              "airline": "Air France"
+            },
+            {
+              "id": 55,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 230,
+              "airline": "Air France"
+            },
+            {
+              "id": 56,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 360,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 153,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 225,
+              "airline": "Air France"
+            },
+            {
+              "id": 154,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 345,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 155,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 235,
+              "airline": "Air France"
+            },
+            {
+              "id": 156,
+              "from": "Baku",
+              "to": "Lyon",
+              "departure": "2025-08-03T16:00",
+              "arrival": "2025-08-03T20:00",
+              "price": 350,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Nice",
+          "image":"nice.png",
+          "flights": [
+            {
+              "id": 57,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 210,
+              "airline": "Air France"
+            },
+            {
+              "id": 58,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 340,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 59,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 215,
+              "airline": "Air France"
+            },
+            {
+              "id": 60,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 330,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 157,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 205,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 158,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 335,
+              "airline": "Air France"
+            },
+            {
+              "id": 159,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 220,
+              "airline": "Air France"
+            },
+            {
+              "id": 160,
+              "from": "Baku",
+              "to": "Nice",
+              "departure": "2025-08-04T15:00",
+              "arrival": "2025-08-04T19:00",
+              "price": 325,
+              "airline": "Air France",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "a7a4"
+    },
+    {
+      "country": "United Kingdom",
+      "title":"(UK)",
+      "cities": [
+        {
+          "name": "London",
+          "image":"london.png",
+          "flights": [
+            {
+              "id": 61,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 260,
+              "airline": "British Airways"
+            },
+            {
+              "id": 62,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 390,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 63,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T06:00",
+              "arrival": "2025-08-10T10:00",
+              "price": 270,
+              "airline": "British Airways"
+            },
+            {
+              "id": 64,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 380,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 161,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 265,
+              "airline": "British Airways",
+              "roundTrip": {
+                "departure": "2025-08-20T10:00",
+                "arrival": "2025-08-20T14:00"
+              }
+            },
+            {
+              "id": 162,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 385,
+              "airline": "Virgin Atlantic"
+            },
+            {
+              "id": 163,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 275,
+              "airline": "British Airways"
+            },
+            {
+              "id": 164,
+              "from": "Baku",
+              "to": "London",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T20:00",
+              "price": 375,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Manchester",
+          "image":"manchester.png",
+          "flights": [
+            {
+              "id": 65,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 250,
+              "airline": "British Airways",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 66,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 380,
+              "airline": "Virgin Atlantic"
+            },
+            {
+              "id": 67,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T07:00",
+              "arrival": "2025-08-10T11:00",
+              "price": 255,
+              "airline": "British Airways"
+            },
+            {
+              "id": 68,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 360,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 165,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 245,
+              "airline": "British Airways"
+            },
+            {
+              "id": 166,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 370,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 167,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 260,
+              "airline": "British Airways"
+            },
+            {
+              "id": 168,
+              "from": "Baku",
+              "to": "Manchester",
+              "departure": "2025-08-02T17:00",
+              "arrival": "2025-08-02T21:00",
+              "price": 355,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T19:00",
+                "arrival": "2025-08-20T23:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Birmingham",
+          "image":"birmingham.png",
+          "flights": [
+            {
+              "id": 69,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T13:00",
+              "price": 240,
+              "airline": "British Airways"
+            },
+            {
+              "id": 70,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 370,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 71,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T08:00",
+              "arrival": "2025-08-10T12:00",
+              "price": 235,
+              "airline": "British Airways"
+            },
+            {
+              "id": 72,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 365,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T19:00"
+              }
+            },
+            {
+              "id": 169,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T15:00",
+              "price": 230,
+              "airline": "British Airways",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T17:00"
+              }
+            },
+            {
+              "id": 170,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T14:00",
+              "price": 360,
+              "airline": "Virgin Atlantic"
+            },
+            {
+              "id": 171,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T16:00",
+              "price": 245,
+              "airline": "British Airways"
+            },
+            {
+              "id": 172,
+              "from": "Baku",
+              "to": "Birmingham",
+              "departure": "2025-08-03T15:00",
+              "arrival": "2025-08-03T19:00",
+              "price": 350,
+              "airline": "Virgin Atlantic",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "3636"
+    },
+    {
+      "country": "United States",
+      "title":"(US)",
+      "cities": [
+        {
+          "name": "New York",
+          "image":"newyork.png",
+          "flights": [
+            {
+              "id": 73,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 600,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 74,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 1100,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T10:00",
+                "arrival": "2025-08-20T18:00"
+              }
+            },
+            {
+              "id": 75,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 620,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 76,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T18:00",
+              "arrival": "2025-08-10T02:00",
+              "price": 1150,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T20:00"
+              }
+            },
+            {
+              "id": 173,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 610,
+              "airline": "Delta Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T17:00",
+                "arrival": "2025-08-20T01:00"
+              }
+            },
+            {
+              "id": 174,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T17:00",
+              "arrival": "2025-08-10T01:00",
+              "price": 1080,
+              "airline": "United Airlines"
+            },
+            {
+              "id": 175,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 630,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 176,
+              "from": "Baku",
+              "to": "New York",
+              "departure": "2025-08-10T19:00",
+              "arrival": "2025-08-10T03:00",
+              "price": 1120,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T13:00",
+                "arrival": "2025-08-20T21:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Los Angeles",
+          "image":"los.png",
+          "flights": [
+            {
+              "id": 77,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 630,
+              "airline": "Delta Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T01:00"
+              }
+            },
+            {
+              "id": 78,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T02:00",
+              "price": 1200,
+              "airline": "United Airlines"
+            },
+            {
+              "id": 79,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T01:00",
+              "price": 640,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 80,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T17:00",
+              "arrival": "2025-08-10T03:00",
+              "price": 1180,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T12:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            },
+            {
+              "id": 177,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 620,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 178,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T18:00",
+              "arrival": "2025-08-10T04:00",
+              "price": 1150,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T02:00"
+              }
+            },
+            {
+              "id": 179,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T02:00",
+              "price": 650,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 180,
+              "from": "Baku",
+              "to": "Los Angeles",
+              "departure": "2025-08-02T19:00",
+              "arrival": "2025-08-02T05:00",
+              "price": 1170,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T00:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Chicago",
+          "image":"chicago.png",
+          "flights": [
+            {
+              "id": 81,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 580,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 82,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T21:00",
+              "price": 1050,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            },
+            {
+              "id": 83,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T09:00",
+              "arrival": "2025-08-10T17:00",
+              "price": 590,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 84,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 1070,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T00:00"
+              }
+            },
+            {
+              "id": 181,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T20:00",
+              "price": 570,
+              "airline": "Delta Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T14:00",
+                "arrival": "2025-08-20T22:00"
+              }
+            },
+            {
+              "id": 182,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T10:00",
+              "arrival": "2025-08-10T18:00",
+              "price": 1040,
+              "airline": "United Airlines"
+            },
+            {
+              "id": 183,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T19:00",
+              "price": 600,
+              "airline": "Delta Airlines"
+            },
+            {
+              "id": 184,
+              "from": "Baku",
+              "to": "Chicago",
+              "departure": "2025-08-03T17:00",
+              "arrival": "2025-08-03T01:00",
+              "price": 1060,
+              "airline": "United Airlines",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T02:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "dffa"
+    },
+    {
+      "country": "China",
+      "title":"(CN)",
+      "cities": [
+        {
+          "name": "Beijing",
+          "image":"beijing.png",
+          "flights": [
+            {
+              "id": 85,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 450,
+              "airline": "Air China"
+            },
+            {
+              "id": 86,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 800,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T02:00"
+              }
+            },
+            {
+              "id": 87,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T11:00",
+              "arrival": "2025-08-10T21:00",
+              "price": 460,
+              "airline": "Air China"
+            },
+            {
+              "id": 88,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T17:00",
+              "arrival": "2025-08-10T03:00",
+              "price": 820,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T06:00"
+              }
+            },
+            {
+              "id": 185,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 440,
+              "airline": "Air China",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T01:00"
+              }
+            },
+            {
+              "id": 186,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T16:00",
+              "arrival": "2025-08-10T02:00",
+              "price": 790,
+              "airline": "China Eastern"
+            },
+            {
+              "id": 187,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 470,
+              "airline": "Air China"
+            },
+            {
+              "id": 188,
+              "from": "Baku",
+              "to": "Beijing",
+              "departure": "2025-08-10T18:00",
+              "arrival": "2025-08-10T04:00",
+              "price": 810,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T19:00",
+                "arrival": "2025-08-20T07:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Shanghai",
+          "image":"shanghai.png",
+          "flights": [
+            {
+              "id": 89,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 460,
+              "airline": "Air China",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T01:00"
+              }
+            },
+            {
+              "id": 90,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 820,
+              "airline": "China Eastern"
+            },
+            {
+              "id": 91,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 470,
+              "airline": "Air China"
+            },
+            {
+              "id": 92,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T18:00",
+              "arrival": "2025-08-10T03:00",
+              "price": 830,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T19:00",
+                "arrival": "2025-08-20T04:00"
+              }
+            },
+            {
+              "id": 189,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 450,
+              "airline": "Air China"
+            },
+            {
+              "id": 190,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T17:00",
+              "arrival": "2025-08-10T02:00",
+              "price": 810,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T03:00"
+              }
+            },
+            {
+              "id": 191,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 480,
+              "airline": "Air China"
+            },
+            {
+              "id": 192,
+              "from": "Baku",
+              "to": "Shanghai",
+              "departure": "2025-08-03T19:00",
+              "arrival": "2025-08-03T04:00",
+              "price": 825,
+              "airline": "China Eastern",
+              "roundTrip": {
+                "departure": "2025-08-20T20:00",
+                "arrival": "2025-08-20T05:00"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Guangzhou",
+          "image":"guangzhou.png",
+          "flights": [
+            {
+              "id": 93,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 440,
+              "airline": "Air China"
+            },
+            {
+              "id": 94,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 810,
+              "airline": "China Southern",
+              "roundTrip": {
+                "departure": "2025-08-20T15:00",
+                "arrival": "2025-08-20T01:00"
+              }
+            },
+            {
+              "id": 95,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T12:00",
+              "arrival": "2025-08-10T22:00",
+              "price": 450,
+              "airline": "Air China"
+            },
+            {
+              "id": 96,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T17:00",
+              "arrival": "2025-08-10T03:00",
+              "price": 820,
+              "airline": "China Southern",
+              "roundTrip": {
+                "departure": "2025-08-20T18:00",
+                "arrival": "2025-08-20T04:00"
+              }
+            },
+            {
+              "id": 193,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T14:00",
+              "arrival": "2025-08-10T00:00",
+              "price": 430,
+              "airline": "Air China",
+              "roundTrip": {
+                "departure": "2025-08-20T16:00",
+                "arrival": "2025-08-20T02:00"
+              }
+            },
+            {
+              "id": 194,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T15:00",
+              "arrival": "2025-08-10T01:00",
+              "price": 800,
+              "airline": "China Southern"
+            },
+            {
+              "id": 195,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-10T13:00",
+              "arrival": "2025-08-10T23:00",
+              "price": 460,
+              "airline": "Air China"
+            },
+            {
+              "id": 196,
+              "from": "Baku",
+              "to": "Guangzhou",
+              "departure": "2025-08-04T18:00",
+              "arrival": "2025-08-04T04:00",
+              "price": 815,
+              "airline": "China Southern",
+              "roundTrip": {
+                "departure": "2025-08-20T19:00",
+                "arrival": "2025-08-20T05:00"
+              }
+            }
+          ]
+        }
+      ],
+      "id": "2c55"
+    }
+  ]
+}
