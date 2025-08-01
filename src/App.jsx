@@ -8,6 +8,7 @@ import { useState } from "react"
 import { Toaster } from "react-hot-toast"
 import { duration } from "@mui/material/styles"
 import Transport from "./pages/Transport"
+import Tickets from "./pages/Tickets"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<Main />}/>
           <Route path="/flights" element={<Flight />}/>
           <Route path ="/flights/transport" element={<Transport/> } />
+          <Route path ="/flights/transport/tickets" element={<Tickets/> } />
           <Route path="/hotels" element={<Hotels />}/>
           <Route path="/carhire" element={<Carhire />}/>
         </Route>

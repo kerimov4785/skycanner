@@ -29,10 +29,10 @@ function Transport() {
     cityFlights = []
   }
 
-  const firstDay = firstDate.slice(8, 10);
-  const firstMonth = +firstDate.slice(5, 7);
-  const secondDay = secondDate.slice(8, 10);
-  const secondMonth = +secondDate.slice(5, 7);
+  const firstDay = firstDate?.slice(8, 10);
+  const firstMonth = +firstDate?.slice(5, 7);
+  const secondDay = secondDate?.slice(8, 10);
+  const secondMonth = +secondDate?.slice(5, 7);
   console.log(cityFlights);
 
   const allFlights = cityFlights.length != 0 ? toCountry == 'Везьде' ? cityFlights.flatMap(item => item.cities.filter(item => filterCity(item))) : cityFlights.cities.filter(item => filterCity(item)) : []
