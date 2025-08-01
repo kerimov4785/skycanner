@@ -41,8 +41,6 @@ function FlightFilter() {
         setDate1,
         date2,
         setDate2,
-        searchTicket,
-        setSearchTicket,
     } = useContext(AllContext) // AllFlights DATA    
 
     let [typeStatus, setTypeStatus] = useState(false)
@@ -75,7 +73,7 @@ function FlightFilter() {
     //     document.body.style.overflow =(mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
     // },[mobileFrom,mobileDate,mobileTo])
 
-    window.onclick = function (e) {
+    window.addEventListener('click', function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
             setDatePicker1(false)
         }
@@ -91,8 +89,9 @@ function FlightFilter() {
         if (e.target != inp2Ref.current && e.target != toP.current && e.target != toBox.current) {
             setToPickerStatus(false)
         }
-    }
-
+    })
+    console.log(fromCity);
+    
     function reversePlaces(e) {
         e.stopPropagation()
         setFromPlace(toPlace)
@@ -108,7 +107,7 @@ function FlightFilter() {
             }
         } else {
             if (fromPlace && toPlace && date1 != 'Добавьте дату') {
-                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
+                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=&fromCity=${fromCity}&toCity=${toCity}`)
             }
             else {
                 toast.error('Fill')

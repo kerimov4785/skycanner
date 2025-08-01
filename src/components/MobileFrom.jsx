@@ -7,16 +7,10 @@ import toast from 'react-hot-toast'
 function MobileFrom({ setMobileFrom }) {
     let fromMob = useRef(null)
     let { flights, fromPlace, toPlace, setFromCity, setFromPlace } = useContext(AllContext) // AllFlights DATA    
-    function selectFrom(name, city) {
+    function selectFrom(name) {
         if (toPlace != name) {
             setFromPlace(name)
             setMobileFrom(false)
-            if (city != undefined) {
-                setFromCity(city)
-            }
-            else (
-                setFromCity('')
-            )
         } else {
             toast.error('Select another country')
         }

@@ -17,11 +17,16 @@
 
 /* header */
 .header-bg {
+    position: relative;
     background-color: var(--darkblue);
 }
 
 .header {
     padding: 20px 20px;
+}
+
+.header2 {
+    padding: 20px 30px;
 }
 
 header>div>svg,
@@ -926,7 +931,7 @@ input[type="checkBox"] {
 }
 
 /* transportFilter */
-.transportFilter {
+.transportFilter,.ticketFilter {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -938,7 +943,26 @@ input[type="checkBox"] {
     font: 400 15px 'Inter';
     color: var(--darkblue);
 }
+.ticketFilter{
+    background-color:#15457980;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+.ticketFilter:hover{
+    background-color: #161616;
+}
 
+.tr-filterFlight .filterFlight {
+    padding: 20px 0 10px 0;
+}
+#okk{
+    cursor: pointer;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #05203c88;
+}
 /* citiesSection */
 .bg-city {
     background-color: #eff3f8;
@@ -1055,6 +1079,7 @@ input[type="checkBox"] {
     cursor: pointer;
     position: relative;
     font: 400 11px 'Inter';
+    width: 117px;
 }
 
 .minitext::before {
@@ -1233,6 +1258,16 @@ input[type="checkBox"] {
 
 @media only screen and (max-width:768px) {
 
+    .container,
+    .container2 {
+        padding: 0 15px;
+    }
+
+    .header,
+    .header2 {
+        padding: 20px 15px;
+    }
+
     .filterFlight>div:nth-child(2) {
         flex-direction: column;
     }
@@ -1354,13 +1389,15 @@ input[type="checkBox"] {
         flex-direction: column;
     }
 
-    .transportFilter {
+    .transportFilter,.ticketFilter {
         flex-direction: column;
         gap: 0;
         font-size: 14px;
         align-items: center;
         padding: 12px 20px;
     }
+
+
 
     .main-img button {
         display: none;

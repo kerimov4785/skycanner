@@ -13,17 +13,19 @@ import Tickets from "./pages/Tickets"
 function App() {
   return (
     <>
-      <Toaster position="top-center" toastOptions={{ duration: 3000,style:{
-        font:'400 16px "Inter"',zIndex:'100'        
-      } }} />
+      <Toaster position="top-center" toastOptions={{
+        duration: 3000, style: {
+          font: '400 16px "Inter"', zIndex: '100'
+        }
+      }} />
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Main />}/>
-          <Route path="/flights" element={<Flight />}/>
-          <Route path ="/flights/transport" element={<Transport/> } />
-          <Route path ="/flights/transport/tickets" element={<Tickets/> } />
-          <Route path="/hotels" element={<Hotels />}/>
-          <Route path="/carhire" element={<Carhire />}/>
+          <Route index element={<Main />} />
+          <Route path="/flights" element={<Flight />} />
+          <Route path="/flights/transport" element={<Transport />} />
+          <Route path="/flights/transport/tickets" element={<Tickets />} />
+          <Route path="/hotels" element={<Hotels />} />
+          <Route path="/carhire" element={<Carhire />} />
         </Route>
       </Routes>
     </>

@@ -5,16 +5,10 @@ import toast from 'react-hot-toast'
 
 function FromPicker({setFromPickerStatus }) {
     let { flights,toPlace,fromPlace, setFromCity, setFromPlace} = useContext(AllContext) // AllFlights DATA    
-    function selectFrom(name, city) {
+    function selectFrom(name) {
         if (toPlace != name) {
             setFromPlace(name)
             setFromPickerStatus(false)
-            if (city != undefined) {
-                setFromCity(city)
-            }
-            else(
-                setFromCity('')
-            )
         }else{
             toast.error('Select another country')
         }

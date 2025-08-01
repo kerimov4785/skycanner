@@ -3,7 +3,7 @@ import { AllContext } from '../context/DataContext'
 import { getMonthName } from './FlightFilter'
 import { useLocation } from 'react-router-dom';
 
-function TransportFilter({setTrFilterStatus}) {
+function TicketFilter({setTicketFilterStatus,ticketFilterStatus}) {
     const location = useLocation();
     const params = new URLSearchParams(location.search)
     let fromCountry = params.get('from')
@@ -14,11 +14,11 @@ function TransportFilter({setTrFilterStatus}) {
     let toCity = params.get('toCity')
 
     return (
-        <div className='transportFilter' onClick={() => setTrFilterStatus(true)} >
-            <h3>{fromCountry} - {toCountry}</h3>
+        <div className='ticketFilter' onClick={() => setTicketFilterStatus(!ticketFilterStatus)} >
+            <h3>{fromCity} - {toCity}</h3>
             <h3>{firstDate.slice(8, 10)} {getMonthName(firstDate.slice(5, 7))} {secondDate ? '-' : ''} {secondDate?.slice(8, 10)} {getMonthName(secondDate.slice(5, 7))}</h3>
         </div>
     )
 }
 
-export default TransportFilter
+export default TicketFilter

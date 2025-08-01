@@ -13,7 +13,7 @@ function DataContext({ children }) {
     let [datePicker1, setDatePicker1] = useState(false)
     let [datePicker2, setDatePicker2] = useState(false)
     let [fromPlace, setFromPlace] = useState('') // country1
-    let [fromCity, setFromCity] = useState('') // city1
+    let [fromCity, setFromCity] = useState('Baku') // city1
     let [toPlace, setToPlace] = useState('')  // country2
     let [toCity, setToCity] = useState('')  // city2
     const [date1, setDate1] = useState('Добавьте дату');

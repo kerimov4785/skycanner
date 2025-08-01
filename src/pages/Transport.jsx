@@ -14,14 +14,15 @@ function Transport() {
   let firstDate = params.get('date1')
   let secondDate = params.get('date2') ? params.get('date2') : ''
   let fromCity = params.get('fromCity')
+  console.log(fromCity);
+  
   let toCity = params.get('toCity')
-
   let cityFlights
   if (fromCountry == 'Azerbaijan') {
     if (toCountry == 'Везьде') {
       cityFlights = flights.flatMap(item => item)
     }
-    else if(flights.some(item => item.country == toCountry)){
+    else if (flights.some(item => item.country == toCountry)) {
       cityFlights = flights.find(item => (item.country == toCountry))
     }
   }
@@ -33,8 +34,6 @@ function Transport() {
   const firstMonth = +firstDate?.slice(5, 7);
   const secondDay = secondDate?.slice(8, 10);
   const secondMonth = +secondDate?.slice(5, 7);
-  console.log(cityFlights);
-
   const allFlights = cityFlights.length != 0 ? toCountry == 'Везьде' ? cityFlights.flatMap(item => item.cities.filter(item => filterCity(item))) : cityFlights.cities.filter(item => filterCity(item)) : []
 
   function filterCity(item) {

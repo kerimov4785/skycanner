@@ -13,7 +13,7 @@ function MainLayout() {
     }
     return (
         <>
-            <Header />
+            <Header/>
             <Outlet />
             <Footer />
         </>
