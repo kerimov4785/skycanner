@@ -13,10 +13,11 @@ function Card({ city }) {
     let secondDate = params.get('date2') ? params.get('date2') : ''
     let fromCity = params.get('fromCity')
     let toCity = params.get('toCity')
-    console.log(firstDate);
-    
+    let tripType = params.get('tripType')
+    let title1 = params.get('title1')
+    let title2 = params.get('title2')
     return (
-        <Link onClick={() => setToCity(toCity)} to={`tickets/?from=${fromCountry}&to=${toCountry}&date1=${firstDate}&date2=${secondDate}&fromCity=${fromCity}&toCity=${city.name}`} className='cityCard' >
+        <Link onClick={() => setToCity(toCity)} to={`tickets/?tripType=${tripType}&from=${fromCountry}&title1=${title1}&title2=${title2}&to=${toCountry}&date1=${firstDate}&date2=${secondDate}&fromCity=${fromCity}&toCity=${city.name}`} className='cityCard' >
             <img src={`/assets/${city.image}`} alt="" />
             <div>
                 <h3>{city.name}</h3>

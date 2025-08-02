@@ -3,13 +3,10 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import { AllContext } from '../context/DataContext'
 import { useLocation } from 'react-router-dom';
 
-function AviaCompany() {
+function AviaCompany({toCity}) {
     let { flights } = useContext(AllContext)
-    const location = useLocation();
-    const params = new URLSearchParams(location.search)
-    let toCountry = params.get('toCity')
     let allAirlines = []
-    flights.map(item => item.cities.map(item => item.flights.filter(item => item.to == toCountry).map(item => allAirlines.push(item.airline))
+    flights.map(item => item.cities.map(item => item.flights.filter(item => item.to == toCity).map(item => allAirlines.push(item.airline))
     ))
     let airlines = [...new Set(allAirlines)]
 

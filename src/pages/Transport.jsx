@@ -14,8 +14,6 @@ function Transport() {
   let firstDate = params.get('date1')
   let secondDate = params.get('date2') ? params.get('date2') : ''
   let fromCity = params.get('fromCity')
-  console.log(fromCity);
-  
   let toCity = params.get('toCity')
   let cityFlights
   if (fromCountry == 'Azerbaijan') {

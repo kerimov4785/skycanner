@@ -4,7 +4,7 @@ import { FaFlag, FaPlane } from 'react-icons/fa6'
 import toast from 'react-hot-toast'
 
 function FromPicker({setFromPickerStatus }) {
-    let { flights,toPlace,fromPlace, setFromCity, setFromPlace} = useContext(AllContext) // AllFlights DATA    
+    let { flights,toPlace,fromPlace, setFromPlace} = useContext(AllContext) // AllFlights DATA    
     function selectFrom(name) {
         if (toPlace != name) {
             setFromPlace(name)

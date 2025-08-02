@@ -24,7 +24,7 @@ export function getMonthName(monthNumber) {
     return ''
 }
 function FlightFilter() {
-    let { flights, setFlights,
+    let { flights,
         tripType,
         setTripType,
         person,
@@ -66,12 +66,7 @@ function FlightFilter() {
     let inp2Ref = useRef(null)
     let toP = useRef(null)
     let toBox = useRef(null)
-
     let navigate = useNavigate()
-
-    // useEffect(() => {
-    //     document.body.style.overflow =(mobileFrom || mobileTo || mobileDate) ? 'hidden' : 'auto'
-    // },[mobileFrom,mobileDate,mobileTo])
 
     window.addEventListener('click', function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
@@ -90,8 +85,7 @@ function FlightFilter() {
             setToPickerStatus(false)
         }
     })
-    console.log(fromCity);
-    
+
     function reversePlaces(e) {
         e.stopPropagation()
         setFromPlace(toPlace)
@@ -100,14 +94,28 @@ function FlightFilter() {
     function search() {
         if (tripType == 'Туда-обратно') {
             if (fromPlace && toPlace && date1 != 'Добавьте дату' && date2 != 'Добавьте дату') {
-                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=${date2.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
+                let title1 = flights.find(item => item.country == fromPlace).title
+                let title2 = flights.find(item => item.country == toPlace).title
+                if (!toCity) {
+                    navigate(`/flights/transport?tripType=Туда-обратно&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=${date2.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
+                }
+                else {
+                    navigate(`/flights/transport/tickets/?tripType=Туда-обратно&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=${date2.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
+                }
             }
             else {
                 toast.error('Fill')
             }
         } else {
             if (fromPlace && toPlace && date1 != 'Добавьте дату') {
-                navigate(`/flights/transport?from=${fromPlace}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=&fromCity=${fromCity}&toCity=${toCity}`)
+                let title1 = flights.find(item => item.country == fromPlace).title
+                let title2 = flights.find(item => item.country == toPlace).title
+                if (!toCity) {
+                    navigate(`/flights/transport?tripType=В одну сторону&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=&fromCity=${fromCity}&toCity=${toCity}`)
+                }
+                else {
+                    navigate(`/flights/transport/tickets/?tripType=В одну сторону&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=&fromCity=${fromCity}&toCity=${toCity}`)
+                }
             }
             else {
                 toast.error('Fill')
