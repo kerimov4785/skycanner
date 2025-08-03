@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 import { AllContext } from '../context/DataContext'
 import Ticket2Way from '../components/Ticket2Way'
 import Ticket1Way from '../components/Ticket1Way'
+import Banner1 from '../components/Banner1'
 
 function Tickets() {
     let { flights } = useContext(AllContext)
@@ -51,8 +52,8 @@ function Tickets() {
                                 ) : <div className='none' ><h3>No flights found for these requests :(</h3></div>}
                             </div>
                         </div>
-                        <div>
-
+                        <div className='banners' >
+                            <Banner1 />
                         </div>
                     </section>
                 </div>

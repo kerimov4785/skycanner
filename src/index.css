@@ -1078,7 +1078,7 @@ input[type="checkBox"] {
 
 .tickets-section {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .bg-tickets {
@@ -1180,6 +1180,11 @@ input[type="checkBox"] {
 }
 
 /* ticket */
+.ticket-info {
+    margin-left: 20px;
+    flex: 1;
+}
+
 .ticket-info #info h5 {
     cursor: pointer;
     position: relative;
@@ -1210,6 +1215,7 @@ input[type="checkBox"] {
 }
 
 .flight-card {
+    position: relative;
     cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
@@ -1222,11 +1228,16 @@ input[type="checkBox"] {
 .card-col-1,
 .way2-line {
     background-color: white;
-    width: 480px;
     display: flex;
     color: #626971;
     align-items: center;
     gap: 100px;
+    width: 100%;
+}
+
+.card-col-1,
+.card-way2-col-1 {
+    width: 67%;
 }
 
 .card-way2-col-1 {
@@ -1242,13 +1253,21 @@ input[type="checkBox"] {
 }
 
 .card-col-1 img,
-.way2-line img {
+.way2-line img,
+.flight-card>img {
     width: 60px;
     height: 30px;
     object-fit: cover;
 }
 
-.card-col-1>div,
+.flight-card>img {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    display: none;
+}
+
+.card-way2-col-1, .card-col-1 > div,
 .way2-line>div {
     display: flex;
     align-items: center;
@@ -1312,11 +1331,96 @@ input[type="checkBox"] {
 }
 
 .card-col-2 {
+    display: flex;
     background-color: white;
-    width: 220px;
+    padding: 20px;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
 }
 
+.card-col-2 .ticket-price {
+    font: 400 18px 'Inter';
+}
 
+.card-col-2 button>svg {
+    margin-top: 3px;
+}
+
+.card-col-2 button,
+.banner1 button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--darkblue);
+    border-radius: 7px;
+    padding: 8px 0;
+    font: 700 15px 'Inter';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card-col-2 button {
+    width: 160px;
+}
+
+.banner1 button {
+    width: 100%;
+}
+
+.like {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+/* banner */
+.banner1 {
+    cursor: pointer;
+    width: 300px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 #25201f4d;
+    color: #161616;
+    transition: .3s;
+}
+
+.banner1 button:hover {
+    background-color: #154679;
+}
+
+.banner1:hover {
+    box-shadow: 0 3px 10px 0 #25201f3b;
+}
+
+.banner1 h4 {
+    font: 600 19px 'Inter';
+    text-align: center;
+    line-height: 24px;
+}
+
+.banner1>div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.banner1 img {
+    width: 32px;
+}
+
+.banner1 p {
+    font: 400 13px 'Inter';
+    line-height: 20px;
+    text-align: center;
+    margin: 12px 0 15px;
+}
 
 @keyframes spin {
     0% {
@@ -1325,6 +1429,17 @@ input[type="checkBox"] {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    .banners {
+        display: none;
+    }
+
+    .ticket-info {
+        flex: initial;
+        width: 750px;
     }
 }
 
@@ -1345,6 +1460,24 @@ input[type="checkBox"] {
 }
 
 @media only screen and (max-width: 1030px) {
+    .tickets-filter {
+        display: none;
+    }
+
+    .ticket-info {
+        width: 100%;
+        margin: 0;
+    }
+
+    .flight-card>img {
+        display: block;
+    }
+    .card-col-1 img, .way2-line img{
+        display: none;
+    }
+    .card-col-1, .way2-line{
+        justify-content: center;
+    }
 
     .filter-box p,
     .filter-box h5,
@@ -1521,7 +1654,23 @@ input[type="checkBox"] {
         font-size: 22px;
     }
 }
-
+@media only screen and (max-width:640px) {
+    .flight-card{
+        flex-direction: column;
+    }
+    .card-way2-col-1,.card-col-2,.card-col-1{
+        width: 100%;
+    }
+    .card-way2-col-1,.card-col-1{
+        padding-top: 50px;
+    }
+    .card-col-2{
+        flex-direction: row;
+        gap: 20px;
+        justify-content: end;
+        padding: 15px 20px;
+    }
+}
 @media only screen and (max-width:540px) {
     .citiesSection>h2 {
         font-size: 26px;
