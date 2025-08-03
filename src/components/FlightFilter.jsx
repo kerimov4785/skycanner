@@ -139,17 +139,19 @@ function FlightFilter() {
                 </div>
                 <div>
                     <div>
-                        <div ref={fromBox} id='box1' className='filter-box first-box ' onClick={() => (inp1Ref.current.focus(), setFromPickerStatus(true), setMobileFrom(true))} >
+                        <div ref={fromBox} id='box1' className='filter-box first-box ' onClick={() => (inp1Ref.current.focus(), setFromPickerStatus(true), setMobileFrom(true),setFromPlace(''))} >
                             <div className='reverseButton' onClick={(e) => reversePlaces(e)} >
                                 <FaArrowsRotate />
                             </div>
                             <p ref={fromP} >Откуда:</p>
+                            <h5 className='mobileInput'>{fromPlace || <span style={{color:"#626971"}}>Страна или город</span> }</h5>
                             <input ref={inp1Ref} value={fromPlace} onChange={(e) => setFromPlace(e.target.value)} style={tripType == 'В одну сторону' ? { maxWidth: '260px' } : null} placeholder='Страна или город' />
                             {fromPickerStatus && window.innerWidth > 768 ? <FromPicker toPlace={toPlace} setFromCity={setFromCity} setFromPickerStatus={setFromPickerStatus} setFromPlace={setFromPlace} /> : null}
                             {fromPlace && fromPickerStatus && window.innerWidth > 768 ? <IoIosCloseCircle className='deleteInp' size={25} onClick={() => setFromPlace('')} /> : null}
                         </div>
-                        <div ref={toBox} id='box2' className='filter-box' onClick={() => (inp2Ref.current.focus(), setToPickerStatus(true), setMobileTo(true))} >
+                        <div ref={toBox} id='box2' className='filter-box' onClick={() => (inp2Ref.current.focus(), setToPickerStatus(true), setMobileTo(true),setToPlace(''))} >
                             <p ref={toP} >Куда</p>
+                            <h5 className='mobileInput' >{toPlace || <span style={{color:"#626971"}}>Страна или город</span> }</h5>
                             <input ref={inp2Ref} value={toPlace} onChange={(e) => setToPlace(e.target.value)} style={tripType == 'В одну сторону' ? { maxWidth: '260px' } : null} placeholder='Страна или город' />
                             {toPickerStatus && window.innerWidth > 768 ? <ToPicker fromPlace={fromPlace} setToCity={setToCity} setToPickerStatus={setToPickerStatus} setToPlace={setToPlace} /> : null}
                             {toPlace && toPickerStatus && window.innerWidth > 768 ? <IoIosCloseCircle className='deleteInp' size={25} onClick={() => setToPlace('')} /> : null}
