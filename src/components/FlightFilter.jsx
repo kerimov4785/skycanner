@@ -94,8 +94,8 @@ function FlightFilter() {
     function search() {
         if (tripType == 'Туда-обратно') {
             if (fromPlace && toPlace && date1 != 'Добавьте дату' && date2 != 'Добавьте дату') {
-                let title1 = flights.find(item => item.country == fromPlace).title
-                let title2 = flights.find(item => item.country == toPlace).title
+                let title1 = flights.find(item => item.country == fromPlace)?.title || ''
+                let title2 = flights.find(item => item.country == toPlace)?.title || ''
                 if (!toCity) {
                     navigate(`/flights/transport?tripType=Туда-обратно&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=${date2.format("YYYY-MM-DDTHH:mm")}&fromCity=${fromCity}&toCity=${toCity}`)
                 }
@@ -108,8 +108,8 @@ function FlightFilter() {
             }
         } else {
             if (fromPlace && toPlace && date1 != 'Добавьте дату') {
-                let title1 = flights.find(item => item.country == fromPlace).title
-                let title2 = flights.find(item => item.country == toPlace).title
+                let title1 = flights.find(item => item.country == fromPlace)?.title || ''
+                let title2 = flights.find(item => item.country == toPlace)?.title || ''
                 if (!toCity) {
                     navigate(`/flights/transport?tripType=В одну сторону&from=${fromPlace}&title1=${title1}&title2=${title2}&to=${toPlace}&date1=${date1.format("YYYY-MM-DDTHH:mm")}&date2=&fromCity=${fromCity}&toCity=${toCity}`)
                 }
