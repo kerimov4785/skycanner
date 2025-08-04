@@ -5,8 +5,8 @@ import { MdFlight } from 'react-icons/md'
 import { BiHotel } from 'react-icons/bi'
 import Question from '../components/Question'
 function Main() {
-    let img1 = '../public/assets/image.png'
-    let img2 = '../public/assets/image2.png'
+    let img1 = 'assets/image.png'
+    let img2 = 'assets/image2.png'
     let question = [
         {
             question: 'Как устроен Skyscanner?',
