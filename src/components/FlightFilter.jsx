@@ -123,6 +123,13 @@ function FlightFilter() {
         }
     }
 
+    if(mobileFrom || mobileTo || mobileDate ){
+        document.body.style.overflow = 'hidden'
+    }else{
+        document.body.style.overflow = 'initial'
+
+    }
+
     return (
         <>
             {mobileFrom && window.innerWidth <= 768 ? <MobileFrom setMobileFrom={setMobileFrom} toPlace={toPlace} setFromCity={setFromCity} setFromPickerStatus={setFromPickerStatus} setFromPlace={setFromPlace} /> : null}
@@ -139,7 +146,7 @@ function FlightFilter() {
                 </div>
                 <div>
                     <div>
-                        <div ref={fromBox} id='box1' className='filter-box first-box ' onClick={() => (inp1Ref.current.focus(), setFromPickerStatus(true), setMobileFrom(true),setFromPlace(''))} >
+                        <div ref={fromBox} id='box1' className='filter-box first-box ' onClick={() => (inp1Ref.current.focus(), setFromPickerStatus(true), window.innerWidth <= 768 ? setMobileFrom(true) : null ,setFromPlace(''))} >
                             <div className='reverseButton' onClick={(e) => reversePlaces(e)} >
                                 <FaArrowsRotate />
                             </div>
@@ -149,7 +156,7 @@ function FlightFilter() {
                             {fromPickerStatus && window.innerWidth > 768 ? <FromPicker toPlace={toPlace} setFromCity={setFromCity} setFromPickerStatus={setFromPickerStatus} setFromPlace={setFromPlace} /> : null}
                             {fromPlace && fromPickerStatus && window.innerWidth > 768 ? <IoIosCloseCircle className='deleteInp' size={25} onClick={() => setFromPlace('')} /> : null}
                         </div>
-                        <div ref={toBox} id='box2' className='filter-box' onClick={() => (inp2Ref.current.focus(), setToPickerStatus(true), setMobileTo(true),setToPlace(''))} >
+                        <div ref={toBox} id='box2' className='filter-box' onClick={() => (inp2Ref.current.focus(), setToPickerStatus(true),window.innerWidth <= 768 ? setMobileTo(true) : null ,setToPlace(''))} >
                             <p ref={toP} >Куда</p>
                             <h5 className='mobileInput' >{toPlace || <span style={{color:"#626971"}}>Страна или город</span> }</h5>
                             <input ref={inp2Ref} value={toPlace} onChange={(e) => setToPlace(e.target.value)} style={tripType == 'В одну сторону' ? { maxWidth: '260px' } : null} placeholder='Страна или город' />
@@ -158,7 +165,7 @@ function FlightFilter() {
 
                         </div>
                         <div className='dateInputs' >
-                            <div ref={date1Box} onClick={() => (setDatePicker1(true), setMobileDate(true))} className='filter-box'>
+                            <div ref={date1Box} onClick={() => (setDatePicker1(true), window.innerWidth <= 768 ? setMobileDate(true) : null)} className='filter-box'>
                                 <p ref={date1P} >Туда</p>
                                 <h5 ref={date1H5} >{date1 == 'Добавьте дату' ? date1 : tripType == 'Туда-обратно' && date2 != 'Добавьте дату' && window.innerWidth <= 768 ? `${date1?.format('DD')} ${getMonthName(date1.format('MM'))} - ${date2?.format('DD')} ${getMonthName(date2.format('MM'))}` : date1?.format('YYYY-MM-DD')}</h5>
                                 {datePicker1 && window.innerWidth > 768 ? <DatePicker1 tripType={tripType} date1={date1} date2={date2} setDate1={setDate1} setDate2={setDate2} setDatePicker1={setDatePicker1} /> : null}

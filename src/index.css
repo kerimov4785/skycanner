@@ -863,8 +863,7 @@ input[type="checkBox"] {
     background-color: white;
     border-radius: 13px;
     left: 0;
-    overflow: hidden;
-    height: 400px;
+    height: 100vh;
     overflow-y: scroll;
 }
 

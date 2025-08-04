@@ -32,7 +32,7 @@ function Tickets() {
     let [checkedWayType, setCheckedWayType] = useState(['Прямой'])
     const [value, setValue] = useState([0, 1439]);
     const [value2, setValue2] = useState([0, 1439]);
-
+    
     useEffect(() => {
         setCheckedAirline(airlines)
     }, [location])
@@ -63,6 +63,12 @@ function Tickets() {
     window.onresize = function () {
         setWindowWidth(window.innerWidth)
     }
+    if(filterStatus){
+        document.body.style.overflow = 'hidden'
+    }
+    else{
+        document.body.style.overflow = 'initial'
+    }
     return (
         <>
             <div className='bg-tickets'>
@@ -88,7 +94,7 @@ function Tickets() {
                             </div>
                             <p className='minitext'>За багаж может взиматься дополнительная плата</p>
                             <div id='info' >
-                                <h5>{`Результаты: ${allTicket.length} из ${8}`}</h5>
+                                <h5>{`Результаты: ${filteredAllTicket.length} из ${8}`}</h5>
                             </div>
                             <div className='ticket-box'>
                                 {filteredAllTicket.length != 0 ? filteredAllTicket
