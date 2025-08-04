@@ -1534,7 +1534,7 @@ input[type="checkBox"] {
         background-color: white;
         width: 100%;
         left: 0;
-        z-index: 2;
+        z-index: 6;
         padding: 0 20px;
         height: 100vh;
     }
