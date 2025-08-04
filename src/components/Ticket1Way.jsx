@@ -5,7 +5,6 @@ import { IoAirplane } from "react-icons/io5";
 function Ticket1Way({ title1, title2, ticketInfo }) {
     let departureTime = ticketInfo.departure.slice(11)
     let arrivalTime = ticketInfo.arrival.slice(11)
-    let [isHover, setIsHover] = useState(false)
     let [isLike, setIsLike] = useState(false)
     function toLike() {
         setIsLike(!isLike)
@@ -54,8 +53,8 @@ function Ticket1Way({ title1, title2, ticketInfo }) {
                 <h3 className='ticket-price'>{ticketInfo.price} ₼</h3>
                 <button>Посмотреть <FaArrowRight /> </button>
             </div>
-            <div className='like' onClick={() => toLike()} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}  >
-                {isLike ? <FaHeart size={21} color='#0062e3' /> : isHover ? <FaHeart size={21} /> : <FaRegHeart size={21} />}
+            <div className='like' onClick={() => toLike()}  >
+                {isLike ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} />}
             </div>
         </div>
     )

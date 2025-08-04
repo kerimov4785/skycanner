@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Transfer from '../components/Transfer'
 import TimePicker from '../components/TimePicker'
 import AviaCompany from '../components/AviaCompany'
@@ -21,7 +21,18 @@ function Tickets() {
     let tripType = params.get('tripType')
     let title1 = params.get('title1')
     let title2 = params.get('title2')
+    let allAirlines = []
+    flights.map(item => item.cities.map(item => item.flights.filter(item => item.to == toCity).map(item => allAirlines.push(item.airline))
+    ))
+    let airlines = [...new Set(allAirlines)]
+    let [checkedAirline, setCheckedAirline] = useState([])
+    let [checkedWayType, setCheckedWayType] = useState(['Прямой'])
+    const [value, setValue] = useState([0, 1439]);
+    const [value2, setValue2] = useState([0, 1439]);
 
+    useEffect(() => {
+        setCheckedAirline(airlines)
+    }, [location])
     const allTicket = fromCountry == 'Azerbaijan' ? tripType == 'Туда-обратно' ?
         flights.find(item => item.country == toCountry).cities
             .find(item => item.name == toCity).flights
@@ -29,6 +40,23 @@ function Tickets() {
         flights.find(item => item.country == toCountry).cities
             .find(item => item.name == toCity).flights
             .filter(item => item.from == fromCity && !item.roundTrip && item.departure.slice(8, 10) == firstDate.slice(8, 10)) : []
+    const filteredAllTicket = allTicket.filter(item => checkedAirline.includes(item.airline)
+        && checkedWayType.includes('Прямой'))
+        .filter(item => isTimeInRange(item.departure.slice(11), value)
+            && (tripType == 'Туда-обратно' ? isTimeInRange(item.roundTrip.departure.slice(11), value2) : true))
+
+
+    function timeToMinutes(timeStr) {
+        const [h, m] = timeStr.split(":").map(Number);
+        return h * 60 + m;
+    }
+
+    function isTimeInRange(timeStr, range) {
+        const time = timeToMinutes(timeStr);
+        const [start, end] = range;
+        return time >= start && time <= end;
+    }
+
     return (
         <>
             <div className='bg-tickets'>
@@ -37,9 +65,9 @@ function Tickets() {
                         <div className='tickets-filter' >
                             <p className='minitext'>Показать весь месяц</p>
                             <button>Остелижать цены</button>
-                            <Transfer />
-                            <TimePicker />
-                            <AviaCompany toCity={toCity} />
+                            <Transfer checkedWayType={checkedWayType} setCheckedWayType={setCheckedWayType} />
+                            <TimePicker tripType={tripType} value={value} value2={value2} setValue={setValue} setValue2={setValue2} />
+                            <AviaCompany toCity={toCity} airlines={airlines} checkedAirline={checkedAirline} setCheckedAirline={setCheckedAirline} />
                         </div>
                         <div className='ticket-info' >
                             <p className='minitext'>За багаж может взиматься дополнительная плата</p>
@@ -47,9 +75,10 @@ function Tickets() {
                                 <h5>{`Результаты: ${allTicket.length} из ${8}`}</h5>
                             </div>
                             <div className='ticket-box'>
-                                {allTicket.length != 0 ? allTicket.map(item =>
-                                    tripType == 'Туда-обратно' ? <Ticket2Way title1={title1} title2={title2} key={item.id} ticketInfo={item} /> : <Ticket1Way title1={title1} title2={title2} key={item.id} ticketInfo={item} />
-                                ) : <div className='none' ><h3>No flights found for these requests :(</h3></div>}
+                                {filteredAllTicket.length != 0 ? filteredAllTicket
+                                    .map(item =>
+                                        tripType == 'Туда-обратно' ? <Ticket2Way title1={title1} title2={title2} key={item.id} ticketInfo={item} /> : <Ticket1Way title1={title1} title2={title2} key={item.id} ticketInfo={item} />
+                                    ) : <div className='none' ><h3>No flights found for these requests :(</h3></div>}
                             </div>
                         </div>
                         <div className='banners' >

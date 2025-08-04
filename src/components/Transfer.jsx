@@ -1,12 +1,21 @@
 import React, { useRef, useState } from 'react'
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-function Transfer() {
+function Transfer({ checkedWayType, setCheckedWayType }) {
     let [isOpen, setIsOpen] = useState(true)
     let inp1 = useRef()
     let inp2 = useRef()
     let inp3 = useRef()
-    function toggleCheckbox(inp) {
+    function delOrAdd(inp, wayType) {
+        if (inp.current.checked) {
+            setCheckedWayType([...checkedWayType, wayType])
+        }
+        else {
+            setCheckedWayType(checkedWayType.filter(item => item != wayType))
+        }
+    }
+    function toggleCheckbox(inp,wayType) {
         inp.current.checked = !inp.current.checked;
+        delOrAdd(inp,wayType)
     }
     return (
         <div className='transfer-box' style={{ height: !isOpen ? "40px" : '210px' }} >
@@ -15,8 +24,8 @@ function Transfer() {
                 {isOpen ? <FaAngleUp /> : <FaAngleDown />}
             </div>
             <div className='checkboxDiv' >
-                <input defaultChecked ref={inp1} type="checkbox" style={{ margin: "0" }} />
-                <div onClick={() => toggleCheckbox(inp1)} >
+                <input defaultChecked ref={inp1} type="checkbox" style={{ margin: "0" }} onClick={() => delOrAdd(inp1,'Прямой')} />
+                <div onClick={() => toggleCheckbox(inp1,'Прямой')} >
                     <p>Прямой</p>
                     <h5>от 250$</h5>
                 </div>

@@ -3,10 +3,9 @@ import Slider from '@mui/material/Slider'
 import React, { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 
-function TimePicker() {
+function TimePicker({value,value2,setValue,setValue2,tripType}) {
     let [isOpen, setIsOpen] = useState(true)
-    const [value, setValue] = React.useState([0, 1439]);
-    const [value2, setValue2] = React.useState([0, 1439]);
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -19,7 +18,7 @@ function TimePicker() {
         return `${hrs}:${mins}`;
     };
     return (
-        <div className='time-box' style={{ height: !isOpen ? "40px" : '250px' }}>
+        <div className='time-box' style={{ height: !isOpen ? "40px" : tripType == "Туда-обратно" ? '250px' : '150px' }}>
             <div className='filter-title' onClick={() => setIsOpen(!isOpen)} >
                 <h4>Время отправления</h4>
                 {isOpen ? <FaAngleUp /> : <FaAngleDown />}
@@ -36,7 +35,8 @@ function TimePicker() {
                     onChange={handleChange}
                 />
             </div>
-            <div id='return' >
+            { tripType == "Туда-обратно" ?
+                <div id='return' >
                 <h3>Обратно</h3>
                 <h3 style={{ marginTop: '5px' }} >{formatTime(value2[0])}- {formatTime(value2[1])}</h3>
                 <div className='slider' >
@@ -49,7 +49,8 @@ function TimePicker() {
                         onChange={handleChange2}
                     />
                 </div>
-            </div>
+            </div> : null
+            }
         </div>
     )
 }
