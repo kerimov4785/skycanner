@@ -12,6 +12,7 @@ import TicketFilter from './TicketFilter'
 
 function Header() {
     let location = useLocation()
+    let navigate= useNavigate()
     let [trFilterStatus, setTrFilterStatus] = useState(false)
     let [ticketFilterStatus, setTicketFilterStatus] = useState(false)
     useEffect(() => {
@@ -22,6 +23,9 @@ function Header() {
     window.addEventListener("scroll", function () {
         setTrFilterStatus(false)
     });
+    function goProfile() {
+        navigate('signUp')
+    }
     function selectFilterType() {
         if (location.pathname == '/flights') {
             return <FlightFilter />
@@ -69,7 +73,7 @@ function Header() {
                             <div className='icons-bg'>
                                 <FaHeart size={22} color='white' />
                             </div>
-                            <div className='icons-bg'>
+                            <div className='icons-bg' onClick={goProfile} >
                                 <FaRegUser size={21} color='white' />
                             </div>
                         </div>
@@ -90,7 +94,6 @@ function Header() {
                     </nav>
                     <div className="header-filter">
                         {selectFilterType()}
-                        {/* {selectFilter2()} */}
                     </div>
                 </header>
             </div>

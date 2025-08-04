@@ -9,6 +9,8 @@ import { Toaster } from "react-hot-toast"
 import { duration } from "@mui/material/styles"
 import Transport from "./pages/Transport"
 import Tickets from "./pages/Tickets"
+import SignUp from "./pages/SignUp"
+import SignIn from "./pages/SignIn"
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/carhire" element={<Carhire />} />
         </Route>
+        <Route path='signUp' element={<SignUp /> } />
+        <Route path='signIn' element={<SignIn /> } />
       </Routes>
     </>
   )

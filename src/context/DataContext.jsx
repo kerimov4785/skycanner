@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useRef, useState } from 'react'
-import getAllFlights from '../services/flightServices'
 
 export const AllContext = createContext()
+import { getAllFlights } from '../services/flightServices';
 
 function DataContext({ children }) {
     let [flights, setFlights] = useState()
@@ -21,7 +21,6 @@ function DataContext({ children }) {
     const [searchTicket, setSearchTicket] = useState('');
 
     useEffect(() => {
-
         getAllFlights()
             .then((item) => setFlights(item))
     }, [])

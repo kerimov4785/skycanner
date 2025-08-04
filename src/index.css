@@ -1490,6 +1490,103 @@ input[type="checkBox"] {
     margin-top: 10px;
 }
 
+/* signUp */
+.signUpPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signUpPage>div {
+    max-width: 431px;
+    padding: 0 20px;
+}
+
+.signUpPage svg {
+    width: 234px;
+}
+
+.signUpPage h2 {
+    font: 600 32px 'Inter';
+    color: #0c0c0c;
+    margin: 24px 0 12px;
+}
+
+.signUpPage > div > p:first-of-type  {
+    font: 400 14px 'Inter';
+    color: #161616;
+    line-height: 20px;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+}
+
+.signUpPage>div>p:last-child {
+    font: 400 12px 'Inter';
+    color: #595f66;
+    line-height: 18px;
+    margin-top: 20px;
+}
+.signUpPage span {
+    cursor: pointer;
+    color: #0c0c0c;
+    text-decoration: underline;
+    font-size: 13px;
+}
+
+.signInputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.signInputBox > div:nth-of-type(2){
+    display: flex;
+    gap: 10px;
+}
+.signInputBox > div:nth-of-type(2) input{
+    width: 100%;
+}
+
+.signInput {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.signInput p {
+    font: 700 11px 'Inter';
+}
+
+.signInput input {
+    border: 1px solid #9ea2a7;
+    padding: 13px 15px;
+    border-radius: 15px;
+    font: 400 16px 'Inter';
+    outline: none;
+}
+
+.signUpPage button {
+    cursor: pointer;
+    padding: 13px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font: 400 14px 'Inter';
+}
+.password-error{
+    font: 400 13px 'Inter';
+    color: red;
+}
+.signUpPage .link{
+    gap: 5px;
+    display: flex;
+    font: 400 13px 'Inter';
+}
+.signUpPage .link a{
+    text-decoration: underline;
+    color: var(--blue);
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -1539,9 +1636,9 @@ input[type="checkBox"] {
         height: 100vh;
     }
 
-    .info-mobile-title{
+    .info-mobile-title {
         display: flex;
-    } 
+    }
 
     .minitext {
         display: none;
@@ -1782,7 +1879,6 @@ input[type="checkBox"] {
     .citiesSection>h2 {
         font-size: 26px;
     }
-
     .adviceBox {
         flex-direction: column;
         gap: 30px;
@@ -1828,5 +1924,13 @@ input[type="checkBox"] {
 
     .none>h3 {
         font-size: 18px;
+    }
+    .signUpPage {
+        margin-top: 40px;
+        align-items: start;
+    }
+    .signInputBox > div:nth-of-type(2){
+        flex-direction: column;
+        gap: 15px;
     }
 }
