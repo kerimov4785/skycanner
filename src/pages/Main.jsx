@@ -5,6 +5,8 @@ import { MdFlight } from 'react-icons/md'
 import { BiHotel } from 'react-icons/bi'
 import Question from '../components/Question'
 function Main() {
+    let img1 = '../public/assets/image.png'
+    let img2 = '../public/assets/image2.png'
     let question = [
         {
             question: 'Как устроен Skyscanner?',
@@ -77,7 +79,7 @@ function Main() {
                             </div>
                         </Link>
                     </div>
-                    <div className='main-img' >
+                    <div className='main-img' style={{background:`url(${window.innerWidth > 550 ? img1 : img2})` , backgroundSize:"cover"}} >
                         <p>Не можете определиться?</p>
                         <h2>Вам открыты любые дороги</h2>
                         <button>Искать везьде</button>

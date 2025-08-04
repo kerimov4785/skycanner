@@ -7,6 +7,7 @@ import { AllContext } from '../context/DataContext'
 import Ticket2Way from '../components/Ticket2Way'
 import Ticket1Way from '../components/Ticket1Way'
 import Banner1 from '../components/Banner1'
+import Banner2 from '../components/Banner2'
 
 function Tickets() {
     let { flights } = useContext(AllContext)
@@ -22,6 +23,8 @@ function Tickets() {
     let title1 = params.get('title1')
     let title2 = params.get('title2')
     let allAirlines = []
+    let [filterStatus,setFilterStatus] = useState(false)
+    let [windowWidth,setWindowWidth] = useState(window.innerWidth)
     flights.map(item => item.cities.map(item => item.flights.filter(item => item.to == toCity).map(item => allAirlines.push(item.airline))
     ))
     let airlines = [...new Set(allAirlines)]
@@ -57,12 +60,21 @@ function Tickets() {
         return time >= start && time <= end;
     }
 
+    window.onresize = function () {
+        setWindowWidth(window.innerWidth)
+    }
     return (
         <>
             <div className='bg-tickets'>
                 <div className='container2'>
                     <section className='tickets-section' >
-                        <div className='tickets-filter' >
+                        <div className='tickets-filter' style={{display: windowWidth > 1030 ? 'block' : filterStatus  ? 'block' : 'none' ,
+                            overflowY: windowWidth < 1030 ? "scroll" : ''
+                        }} >
+                            <div className='ticket-mob-title'>
+                                <h3>Фильтры</h3>
+                                <p onClick={() => setFilterStatus(false)} >Готово</p>
+                            </div>
                             <p className='minitext'>Показать весь месяц</p>
                             <button>Остелижать цены</button>
                             <Transfer checkedWayType={checkedWayType} setCheckedWayType={setCheckedWayType} />
@@ -70,6 +82,10 @@ function Tickets() {
                             <AviaCompany toCity={toCity} airlines={airlines} checkedAirline={checkedAirline} setCheckedAirline={setCheckedAirline} />
                         </div>
                         <div className='ticket-info' >
+                            <div className='info-mobile-title'>
+                                <h3>Авиабилеты</h3>
+                                <p onClick={() => setFilterStatus(true)} >Фильтр</p>
+                            </div>
                             <p className='minitext'>За багаж может взиматься дополнительная плата</p>
                             <div id='info' >
                                 <h5>{`Результаты: ${allTicket.length} из ${8}`}</h5>
@@ -83,6 +99,7 @@ function Tickets() {
                         </div>
                         <div className='banners' >
                             <Banner1 />
+                            <Banner2 tripType={tripType} firstDate={firstDate} secondDate={secondDate} toCity={toCity} />
                         </div>
                     </section>
                 </div>

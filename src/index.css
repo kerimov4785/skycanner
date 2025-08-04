@@ -1,6 +1,6 @@
 :root {
     --darkblue: #05203c;
-    --blue: #0062e3
+    --blue: #0062e3;
 }
 
 .container {
@@ -135,11 +135,8 @@ main {
     margin-top: 40px;
     display: flex;
     border-radius: 15px;
-    background: url('../public/assets/image.png');
     height: 460px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-left: 60px;
     flex-direction: column;
     justify-content: center;
@@ -1122,6 +1119,21 @@ input[type="checkBox"] {
     background-color: #bcc1c7;
 }
 
+.ticket-mob-title {
+    margin: 20px 0;
+    display: none;
+    justify-content: space-between;
+}
+
+.ticket-mob-title h3 {
+    font: 600 15px 'Inter';
+}
+
+.ticket-mob-title p {
+    font: 400 15px 'Inter';
+    text-decoration: underline;
+}
+
 .filter-title {
     cursor: pointer;
     font: 600 18px 'Inter';
@@ -1202,6 +1214,22 @@ input[type="checkBox"] {
     left: 0;
 }
 
+.info-mobile-title {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-mobile-title h3 {
+    font: 600 22px 'Inter';
+    color: #0c0c0c;
+}
+
+.info-mobile-title p {
+    color: var(--blue);
+    font: 700 14px 'Inter';
+}
+
 .ticket-info #info {
     display: flex;
     margin-top: 20px;
@@ -1267,7 +1295,8 @@ input[type="checkBox"] {
     display: none;
 }
 
-.card-way2-col-1, .card-col-1 > div,
+.card-way2-col-1,
+.card-col-1>div,
 .way2-line>div {
     display: flex;
     align-items: center;
@@ -1368,10 +1397,6 @@ input[type="checkBox"] {
     width: 160px;
 }
 
-.banner1 button {
-    width: 100%;
-}
-
 .like {
     position: absolute;
     right: 15px;
@@ -1379,7 +1404,8 @@ input[type="checkBox"] {
 }
 
 /* banner */
-.banner1 {
+.banner1,
+.banner2 {
     cursor: pointer;
     width: 300px;
     padding: 15px;
@@ -1390,15 +1416,21 @@ input[type="checkBox"] {
     transition: .3s;
 }
 
+.banner1 button {
+    width: 100%;
+}
+
 .banner1 button:hover {
     background-color: #154679;
 }
 
-.banner1:hover {
+.banner1:hover,
+.banner2:hover {
     box-shadow: 0 3px 10px 0 #25201f3b;
 }
 
-.banner1 h4 {
+.banner1 h4,
+.banner2 h4 {
     font: 600 19px 'Inter';
     text-align: center;
     line-height: 24px;
@@ -1415,11 +1447,48 @@ input[type="checkBox"] {
     width: 32px;
 }
 
-.banner1 p {
+.banner1 p,
+.banner2 p {
     font: 400 13px 'Inter';
     line-height: 20px;
     text-align: center;
     margin: 12px 0 15px;
+}
+
+.banner2 {
+    margin-top: 10px;
+}
+
+.banner2 p,
+.banner2 h4 {
+    text-align: left;
+}
+
+.banner2>div:first-child>div {
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: #d8dadb;
+    font: 600 12px 'Inter';
+}
+
+.banner2>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.banner2>div:last-child {
+    height: 150px;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+.banner2 svg {
+    width: 30px;
+}
+
+.banner2 img {
+    margin-top: 10px;
 }
 
 @keyframes spin {
@@ -1461,7 +1530,34 @@ input[type="checkBox"] {
 
 @media only screen and (max-width: 1030px) {
     .tickets-filter {
+        position: fixed;
+        top: 0px;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        z-index: 2;
+        padding: 0 20px;
+        height: 100vh;
+    }
+
+    .info-mobile-title{
+        display: flex;
+    } 
+
+    .minitext {
         display: none;
+    }
+
+    .ticket-mob-title {
+        display: flex;
+    }
+
+    .tickets-filter button {
+        display: none;
+    }
+
+    .ticket-info #info {
+        margin-top: 8px;
     }
 
     .ticket-info {
@@ -1472,10 +1568,14 @@ input[type="checkBox"] {
     .flight-card>img {
         display: block;
     }
-    .card-col-1 img, .way2-line img{
+
+    .card-col-1 img,
+    .way2-line img {
         display: none;
     }
-    .card-col-1, .way2-line{
+
+    .card-col-1,
+    .way2-line {
         justify-content: center;
     }
 
@@ -1654,23 +1754,31 @@ input[type="checkBox"] {
         font-size: 22px;
     }
 }
+
 @media only screen and (max-width:640px) {
-    .flight-card{
+    .flight-card {
         flex-direction: column;
     }
-    .card-way2-col-1,.card-col-2,.card-col-1{
+
+    .card-way2-col-1,
+    .card-col-2,
+    .card-col-1 {
         width: 100%;
     }
-    .card-way2-col-1,.card-col-1{
+
+    .card-way2-col-1,
+    .card-col-1 {
         padding: 45px 0 30px 0;
     }
-    .card-col-2{
+
+    .card-col-2 {
         flex-direction: row;
         gap: 20px;
         justify-content: end;
         padding: 15px 20px;
     }
 }
+
 @media only screen and (max-width:540px) {
     .citiesSection>h2 {
         font-size: 26px;
