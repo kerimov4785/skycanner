@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { IoCarSharp } from 'react-icons/io5'
 import { MdFlight } from 'react-icons/md'
 import { BiHotel } from 'react-icons/bi'
 import Question from '../components/Question'
+import { AllContext } from '../context/DataContext'
 function Main() {
+    let {user} = useContext(AllContext)
+    console.log(user);
+    
     let img1 = 'assets/image.png'
     let img2 = 'assets/image2.png'
     let question = [

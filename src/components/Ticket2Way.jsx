@@ -1,17 +1,35 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FaArrowRight, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoAirplane } from "react-icons/io5";
+import { AllContext } from '../context/DataContext';
+import { addLiked, getLiked } from '../services/flightServices';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Ticket2Way({ title1, title2, ticketInfo }) {
   let departureTime = ticketInfo.departure.slice(11)
   let arrivalTime = ticketInfo.arrival.slice(11)
   let roundDepartureTime = ticketInfo.roundTrip.departure.slice(11)
   let roundArrivalTime = ticketInfo.roundTrip.arrival.slice(11)
+  let navigate = useNavigate()
+  let { user, likedTickets, setLikedTickets } = useContext(AllContext)
 
-  let [isLike, setIsLike] = useState(false)
-  function toLike() {
-    setIsLike(!isLike)
+  function toLike(ticket) {
+    if (!user.email) {
+      navigate('/signIn')
+      return
+    }
+    let updated
+    if (!likedTickets.some(item => item.id == ticket.id)) {
+      updated = [...likedTickets, ticket]
+    }
+    else {
+      updated = likedTickets.filter(item => item.id != ticket.id)
+    }
+    setLikedTickets(updated)
+    addLiked(user.id, updated)
   }
+
 
   function getFlightDuration(start, end) {
     let [startH, startM] = start.split(':').map(Number);
@@ -79,8 +97,8 @@ function Ticket2Way({ title1, title2, ticketInfo }) {
         <h3 className='ticket-price'>{ticketInfo.price} ₼</h3>
         <button>Посмотреть <FaArrowRight /> </button>
       </div>
-      <div className='like' onClick={() => toLike()}  >
-        {isLike ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} />}
+      <div className='like' onClick={() => toLike(ticketInfo)}  >
+        {user.id ? likedTickets.some(item => item.id == ticketInfo.id) ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} /> : <FaRegHeart size={21} /> }
       </div>
     </div>
   )

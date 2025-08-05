@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { BiHotel } from 'react-icons/bi'
 import { FaHeart } from 'react-icons/fa'
 import { FaRegUser } from 'react-icons/fa6'
@@ -9,12 +9,14 @@ import { Link, NavLink, useLocation, useNavigate, useParams } from 'react-router
 import FlightFilter from './FlightFilter'
 import TransportFilter from './TransportFilter'
 import TicketFilter from './TicketFilter'
+import { AllContext } from '../context/DataContext'
 
 function Header() {
     let location = useLocation()
     let navigate= useNavigate()
     let [trFilterStatus, setTrFilterStatus] = useState(false)
     let [ticketFilterStatus, setTicketFilterStatus] = useState(false)
+    let { user } = useContext(AllContext)
     useEffect(() => {
         setTrFilterStatus(false)
         setTicketFilterStatus(false)
@@ -24,7 +26,12 @@ function Header() {
         setTrFilterStatus(false)
     });
     function goProfile() {
-        navigate('signUp')
+        if(!user.email){
+            navigate('signUp')
+        }
+        else{
+            navigate('profile')
+        }
     }
     function selectFilterType() {
         if (location.pathname == '/flights') {
@@ -74,7 +81,7 @@ function Header() {
                                 <FaHeart size={22} color='white' />
                             </div>
                             <div className='icons-bg' onClick={goProfile} >
-                                <FaRegUser size={21} color='white' />
+                                { !user.email ? <FaRegUser size={21} color='white' /> : <img src="/assets/user.png" alt="" /> }
                             </div>
                         </div>
                     </div>

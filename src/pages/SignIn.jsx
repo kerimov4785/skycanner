@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { signIn } from '../services/flightServices'
 import toast from 'react-hot-toast'
+import { useContext } from 'react'
+import { AllContext } from '../context/DataContext'
 
 function SignIn() {
   let navigate = useNavigate()
+  let {user,setUser} = useContext(AllContext)
   let activeButtonCSS = { color: "white", background: "#0062e3" }
   let [emailValue, setEmailValue] = useState('')
   let [passwordValue, setPasswordValue] = useState('')
@@ -20,14 +23,19 @@ function SignIn() {
       return
     }
     if (passwordValue.length < 8) {
-      return
+      return 
     }
     if (!isValidEmail(emailValue)) {
       toast.error("Incorrect email.");
       return;
     }
     signIn(obj).then((data) =>
-      data.length != 0 ? (toast.success('Welcome'), navigate('/')) : toast.error('Password or Email is not correct')
+      data.length != 0 ?
+        (toast.success('Welcome'),
+        localStorage['user'] = JSON.stringify(data[0]) , 
+        setUser(data[0]),
+        navigate('/')) 
+                          : toast.error('Password or Email is not correct')
     )
   }
   return (

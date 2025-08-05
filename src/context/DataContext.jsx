@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useRef, useState } from 'react'
 
 export const AllContext = createContext()
-import { getAllFlights } from '../services/flightServices';
+import { getAllFlights, getLiked } from '../services/flightServices';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function DataContext({ children }) {
     let [flights, setFlights] = useState()
@@ -19,12 +20,26 @@ function DataContext({ children }) {
     const [date1, setDate1] = useState('Добавьте дату');
     const [date2, setDate2] = useState('Добавьте дату');
     const [searchTicket, setSearchTicket] = useState('');
+    let [user, setUser] = useState(null)
+    let [likedTickets, setLikedTickets] = useState([])
 
     useEffect(() => {
         getAllFlights()
             .then((item) => setFlights(item))
     }, [])
+    useEffect(() => {
+        setUser(JSON.parse(localStorage['user'] || '{}'))
+    }, [])
+    useEffect(() => {
+        if (JSON.parse(localStorage['user'] || 'false')) {
+            getLiked(JSON.parse(localStorage['user']).id).then(data => setLikedTickets(data.saved))
+        }
+    }, [user])
     const obj = {
+        likedTickets,
+        setLikedTickets,
+        user,
+        setUser,
         flights,
         setFlights,
         tripType,

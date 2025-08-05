@@ -11,6 +11,7 @@ import Transport from "./pages/Transport"
 import Tickets from "./pages/Tickets"
 import SignUp from "./pages/SignUp"
 import SignIn from "./pages/SignIn"
+import Profile from "./pages/Profile"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/flights/transport/tickets" element={<Tickets />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/carhire" element={<Carhire />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path='signUp' element={<SignUp /> } />
         <Route path='signIn' element={<SignIn /> } />
