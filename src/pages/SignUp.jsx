@@ -15,7 +15,9 @@ function SignUp() {
     function submitSign() {
         let obj = {
             email: emailValue,
-            password: passwordValue
+            password: passwordValue,
+            image: 'user1.png',
+            saved:[]
         }
         if (!emailValue || !password2Value || !passwordValue) {
             return
