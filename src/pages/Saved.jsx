@@ -7,12 +7,18 @@ import ConfirmDelete from '../components/ConfirmDelete'
 function Saved() {
     let { likedTickets } = useContext(AllContext)
     let [confirmStatus, setConfirmStatus] = useState(false)
-    let [ticketID , setTicketID ]  = useState()
+    let [ticketID, setTicketID] = useState()
 
+    if (confirmStatus) {
+        document.body.style.overflow = 'hidden'
+    }
+    else {
+        document.body.style.overflow = 'initial'
+    }
     return (
         < div className="container3" >
             {
-                confirmStatus ? <ConfirmDelete ticketID={ticketID} setConfirmStatus={setConfirmStatus} />  : null
+                confirmStatus ? <ConfirmDelete ticketID={ticketID} setConfirmStatus={setConfirmStatus} /> : null
             }
             <section className='likedSection'>
                 <h3>Закладки</h3>

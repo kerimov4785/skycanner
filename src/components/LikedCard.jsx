@@ -4,7 +4,7 @@ import { FaHeart } from 'react-icons/fa';
 import { getMonthName } from './FlightFilter';
 import { addLiked } from '../services/flightServices';
 
-function LikedCard({ ticket,confirmStatus,setConfirmStatus,setTicketID }) {
+function LikedCard({ ticket,setConfirmStatus,setTicketID }) {
     let { flights } = useContext(AllContext)
     let departure = ticket.departure.slice(11)
     let arrival = ticket.arrival.slice(11)
@@ -33,12 +33,6 @@ function LikedCard({ ticket,confirmStatus,setConfirmStatus,setTicketID }) {
         return `${hours} ч ${minutes} мин`;
     }
 
-    if(confirmStatus){
-        document.body.style.overflow = 'hidden'
-    }
-    else{
-        document.body.style.overflow = 'initial'
-    }
     return (
         <div className='liked-card'>
             <span className='like' onClick={() => (setConfirmStatus(true) , setTicketID(ticket.id) ) } >
