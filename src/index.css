@@ -1872,6 +1872,28 @@ input[type="checkBox"] {
         height: 100vh;
     }
 
+    .noneLiked{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .noneLiked > div {
+        width: 100%;
+        text-align: center;
+    }
+    .noneLiked h5{
+        font-size: 20px;
+    }
+    .noneLiked p {
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    .noneLiked button{
+        width: 100%;
+    }
+    .noneLiked img{
+        width: 260px;
+    }
     .info-mobile-title {
         display: flex;
     }
