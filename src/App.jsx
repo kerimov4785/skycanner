@@ -12,6 +12,7 @@ import Tickets from "./pages/Tickets"
 import SignUp from "./pages/SignUp"
 import SignIn from "./pages/SignIn"
 import Profile from "./pages/Profile"
+import Saved from "./pages/Saved"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/carhire" element={<Carhire />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/saved" element={<Saved />} />
         </Route>
         <Route path='signUp' element={<SignUp /> } />
         <Route path='signIn' element={<SignIn /> } />

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { AllContext } from '../context/DataContext';
 import { addLiked, getLiked } from '../services/flightServices';
 import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 
 function Ticket1Way({ title1, title2, ticketInfo }) {
     let departureTime = ticketInfo.departure.slice(11)
@@ -20,6 +21,10 @@ function Ticket1Way({ title1, title2, ticketInfo }) {
         let updated
         if (!likedTickets.some(item => item.id == ticket.id)) {
             updated = [...likedTickets, ticket]
+            toast('Ticket added to favorites',{
+                className:'custom-toast',
+                position:'bottom-center'
+            })
         }
         else {
             updated = likedTickets.filter(item => item.id != ticket.id)

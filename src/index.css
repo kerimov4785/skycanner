@@ -1,6 +1,7 @@
 :root {
     --darkblue: #05203c;
     --blue: #0062e3;
+    --pink: #e70866;
 }
 
 .container {
@@ -14,6 +15,13 @@
     margin: auto;
     padding: 0 30px;
 }
+
+.container3 {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 30px;
+}
+
 
 /* header */
 .header-bg {
@@ -63,7 +71,8 @@ header>div:first-child>div {
     border-radius: 7px;
     transition: .3s;
 }
-.icons-bg > img{
+
+.icons-bg>img {
     width: 26px;
     border-radius: 50%;
 }
@@ -1254,6 +1263,12 @@ input[type="checkBox"] {
     display: flex;
     background-color: #bcc1c7;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.247);
+    transition: .4s;
+}
+
+.flight-card:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.447);
+
 }
 
 .card-col-1,
@@ -1517,7 +1532,7 @@ input[type="checkBox"] {
     margin: 24px 0 12px;
 }
 
-.signUpPage > div > p:first-of-type  {
+.signUpPage>div>p:first-of-type {
     font: 400 14px 'Inter';
     color: #161616;
     line-height: 20px;
@@ -1531,6 +1546,7 @@ input[type="checkBox"] {
     line-height: 18px;
     margin-top: 20px;
 }
+
 .signUpPage span {
     cursor: pointer;
     color: #0c0c0c;
@@ -1543,11 +1559,13 @@ input[type="checkBox"] {
     flex-direction: column;
     gap: 15px;
 }
-.signInputBox > div:nth-of-type(2){
+
+.signInputBox>div:nth-of-type(2) {
     display: flex;
     gap: 10px;
 }
-.signInputBox > div:nth-of-type(2) input{
+
+.signInputBox>div:nth-of-type(2) input {
     width: 100%;
 }
 
@@ -1578,19 +1596,233 @@ input[type="checkBox"] {
     margin-top: 20px;
     font: 400 14px 'Inter';
 }
-.password-error{
+
+.password-error {
     font: 400 13px 'Inter';
     color: red;
 }
-.signUpPage .link{
+
+.signUpPage .link {
     gap: 5px;
     display: flex;
     font: 400 13px 'Inter';
 }
-.signUpPage .link a{
+
+.signUpPage .link a {
     text-decoration: underline;
     color: var(--blue);
 }
+
+/* liked */
+.likedSection {
+    margin: 20px 0;
+}
+
+.likedSection>h3 {
+    font: 600 32px 'Inter';
+    margin: 0 0 40px 0;
+}
+
+.all-liked {
+    display: flex;
+    gap: 40px 15px;
+    flex-wrap: wrap;
+}
+
+.liked-card {
+    position: relative;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 #25201f4d;
+}
+
+.liked-card>div:first-of-type {
+    padding: 14px 16px;
+    height: 160px;
+}
+
+.liked-card-title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.liked-card>img {
+    width: 100%;
+}
+
+.liked-card-title div {
+    height: 2px;
+    width: 17px;
+    background-color: #0c0c0c;
+}
+
+.liked-card h4 {
+    font: 600 19px 'Inter';
+    color: #0c0c0c;
+}
+
+.like {
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.685);
+}
+
+.like svg {
+    margin-left: 1px;
+}
+
+.about-flight {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-flight h5 {
+    font: 600 15px 'Inter';
+    color: #0c0c0c;
+    margin-bottom: 3px;
+}
+
+.about-flight p,
+.about-flight2 p {
+    font: 400 11px 'Inter';
+}
+
+.about-flight h6 {
+    font: 700 11px 'Inter';
+    margin-bottom: 3px;
+}
+
+.about-flight .duration,
+.about-flight2 p {
+    color: #595f66;
+}
+
+.second {
+    margin-top: 15px;
+}
+
+.about-flight2 {
+    padding: 18px 0;
+    border-top: 1px solid #d8dadb;
+}
+
+.about-flight2 h5 {
+    font: 700 15px 'Inter';
+    color: #0c0c0c;
+    margin-bottom: 3px;
+}
+
+.about-flight2 h5,
+.about-flight2 p {
+    padding: 0 14px;
+}
+
+.noneLiked {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #161616;
+    gap: 330px;
+    padding-bottom: 160px;
+}
+
+.noneLiked>div {
+    width: 230px;
+
+}
+
+.noneLiked h5 {
+    font: 600 18px 'Inter';
+}
+
+.noneLiked p {
+    font: 400 13px 'Inter';
+    margin: 20px 0 30px;
+    line-height: 20px;
+}
+
+.noneLiked button {
+    cursor: pointer;
+    padding: 12px 16px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font: 600 14px 'Inter';
+}
+
+.noneLiked img {
+    width: 350px;
+}
+
+.custom-toast {
+    background-color: var(--darkblue) !important;
+    color: white !important;
+}
+.confirm{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.622);
+}
+.confirm > div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 344px;
+    margin: 0 30px;
+    text-align: center;
+}
+.confirm h4{
+    font: 600 23px 'Inter';
+}
+.confirm p{
+    font: 400 15px 'Inter';
+    margin: 20px 0;
+}
+.confirm button{
+    cursor: pointer;
+    font: 600 14px 'Inter';
+    border: none;
+    height: 48px;
+    border-radius:10px;
+}
+.confirm button:first-of-type{
+    color: var(--pink);
+}
+.confirm button:first-of-type:hover{
+    color: white;
+    background-color: var(--pink);
+}
+.confirm button:last-of-type{
+    margin-top: 10px;
+    background-color: transparent;
+}
+.confirm button:last-of-type:hover{
+    background-color: var(--pink);
+    color: white;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -1742,7 +1974,8 @@ input[type="checkBox"] {
 @media only screen and (max-width:768px) {
 
     .container,
-    .container2 {
+    .container2,
+    .container3 {
         padding: 0 15px;
     }
 
@@ -1883,6 +2116,7 @@ input[type="checkBox"] {
     .citiesSection>h2 {
         font-size: 26px;
     }
+
     .adviceBox {
         flex-direction: column;
         gap: 30px;
@@ -1929,12 +2163,30 @@ input[type="checkBox"] {
     .none>h3 {
         font-size: 18px;
     }
+
     .signUpPage {
         margin-top: 40px;
         align-items: start;
     }
-    .signInputBox > div:nth-of-type(2){
+
+    .signInputBox>div:nth-of-type(2) {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .all-liked {
+        flex-direction: column;
+    }
+
+    .liked-card {
+        width: 100%;
+    }
+
+    .liked-card img {
+        height: 168px;
+    }
+
+    .liked-card>div:first-of-type {
+        height: min-content;
     }
 }

@@ -5,6 +5,7 @@ import { AllContext } from '../context/DataContext';
 import { addLiked, getLiked } from '../services/flightServices';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 
 function Ticket2Way({ title1, title2, ticketInfo }) {
   let departureTime = ticketInfo.departure.slice(11)
@@ -22,6 +23,10 @@ function Ticket2Way({ title1, title2, ticketInfo }) {
     let updated
     if (!likedTickets.some(item => item.id == ticket.id)) {
       updated = [...likedTickets, ticket]
+      toast('Ticket added to favorites', {
+        className: 'custom-toast',
+        position: 'bottom-center'
+      })
     }
     else {
       updated = likedTickets.filter(item => item.id != ticket.id)
@@ -98,7 +103,7 @@ function Ticket2Way({ title1, title2, ticketInfo }) {
         <button>Посмотреть <FaArrowRight /> </button>
       </div>
       <div className='like' onClick={() => toLike(ticketInfo)}  >
-        {user.id ? likedTickets.some(item => item.id == ticketInfo.id) ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} /> : <FaRegHeart size={21} /> }
+        {user.id ? likedTickets.some(item => item.id == ticketInfo.id) ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} /> : <FaRegHeart size={21} />}
       </div>
     </div>
   )
