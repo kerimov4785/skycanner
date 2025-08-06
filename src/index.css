@@ -1875,6 +1875,7 @@ input[type="checkBox"] {
     .noneLiked{
         flex-direction: column-reverse;
         gap: 10px;
+        padding-bottom: 10px;
     }
 
     .noneLiked > div {
