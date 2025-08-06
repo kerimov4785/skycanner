@@ -1880,6 +1880,7 @@ input[type="checkBox"] {
     background-color: #d8dadb;
     width: 240px;
     border-radius: 8px;
+    color: #0c0c0c !important;
     font: 600 15px 'Inter';
 }
 .profile-col1 button:hover{
