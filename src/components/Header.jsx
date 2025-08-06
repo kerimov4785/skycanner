@@ -82,7 +82,7 @@ function Header() {
                                 <FaHeart size={22} color='white' />
                             </div>
                             <div className='icons-bg' onClick={() => goProfile('profile')} >
-                                { !user.email ? <FaRegUser size={21} color='white' /> : <img src="/assets/user.png" alt="" /> }
+                                { !user.email ? <FaRegUser size={21} color='white' /> : <img src={`/assets/${user.image}`} alt="" /> }
                             </div>
                         </div>
                     </div>
