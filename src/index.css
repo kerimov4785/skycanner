@@ -2538,7 +2538,17 @@ input[type="checkBox"] {
         width: calc((100% - 4px)/2);
     }
 }
-
+@media only screen and (max-width:510px) {
+    .car-section-title{
+        font-size: 22px;
+    }
+    .slider-car-buttons{
+        display: none;
+    }
+    .popular-cities{
+        overflow-x: scroll;
+    }
+}
 @media only screen and (max-width:400px) {
     header>div:first-child>div {
         gap: 0;
