@@ -2540,7 +2540,7 @@ input[type="checkBox"] {
 }
 @media only screen and (max-width:510px) {
     .car-section-title{
-        font-size: 22px;
+        font-size: 24px;
     }
     .slider-car-buttons{
         display: none;
