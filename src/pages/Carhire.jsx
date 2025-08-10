@@ -4,43 +4,68 @@ import { Link } from 'react-router-dom'
 import { FaCaretRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import Advice1Hotel from '../components/Advice1Hotel'
 import PopularCard from '../components/PopularCard'
+import PopularSection from '../components/PopularSection'
+import Advice2 from '../components/Advice2'
+import Advice2Car from './Advice2Car'
+import SectionCarCompany from '../components/SectionCarCompany'
+import FlightQuestion from '../components/FlightQuestion'
 
 function Carhire() {
-  let [x, setX] = useState(0)
-  let boxes1 = useRef(null)
-  let [page, setPage] = useState(1)
-  let [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  window.onresize = function () {
-    setWindowWidth(window.innerWidth)
-  }
-  let unActiveButton = {
-    filter: 'opacity(0.5)',
-    cursor: 'no-drop',
-  }
-  let Allquantity = 11
-  let Quantity1Page = 0
-  if (windowWidth < 680) {
-    Quantity1Page = 1
-  }
-  else if (windowWidth < 1030) {
-    Quantity1Page = 2
-  }
-  else {
-    Quantity1Page = 3
-  }
-  useEffect(() => {
-    setX(boxes1.current.offsetWidth + 24)
-  }, [windowWidth])
-  function move(navigate) {
-
-    if (navigate == 0 && page != 1) {
-      setPage(page - 1)
-    }
-    if (navigate == 1 && Math.ceil(Allquantity / Quantity1Page) > page) {
-      setPage(page + 1)
-    }
-  }
-
+  let questions = [
+    {
+      question: 'Как Skyscanner сравнивает цены на прокат автомобилей?',
+      answer: `Мы непрерывно сканируем предложения большинства крупных компаний, используя ту же технологию, что и для поиска авиабилетов. Поэтому вам не нужно сравнивать условия проката на разных сайтах: все они будут собраны на одной странице. На Skyscanner вы можете легко найти самые выгодные цены в 18 000 пунктах проката по всему миру.`
+    },
+    {
+      question: 'Добавляются ли к указанной цене сборы?',
+      answer: `Цену в объявлении устанавливает автопрокатная компания. Окончательная стоимость может отличаться, если вы выберете дополнительные услуги. Перед бронированием рекомендуем перепроверить цену и ознакомиться с условиями компании по прокату`
+    },
+    {
+      question: 'Могу ли я вернуть арендованную машину в другом месте?',
+      answer: `Да, некоторые прокатчики, такие как Hertz и Europcar, разрешают забирать автомобиль в одном месте и возвращать в другом. Просто выберите условие поиска Возврат в другое место, чтобы найти такие предложения. Учтите, что за услугу может взиматься дополнительный сбор.`
+    },
+    {
+      question: 'В каких странах я могу найти на Skyscanner прокат автомобилей?',
+      answer: `Практически где угодно. Мы анализируем предложения от 18 000 пунктов проката из 170 стран, используя ту же зарекомендовавшую себя технологию, что и для поиска авиабилетов.`
+    },
+    {
+      question: 'Нужна ли для аренды автомобиля кредитная карта?',
+      answer: `Арендовать авто проще и быстрее с кредитной картой, но большинство крупных компаний, 
+      таких как Sixt, Avis, Budget или Hertz, позволят вам оформить аренду с дебетовой картой — при условии, что на ней есть определенная сумма.`
+    },
+    {
+      question: 'Могу ли я арендовать минивэн?',
+      answer: `
+Конечно! Минивэн в г. Баку можно арендовать и для перевозки вещей, и для путешествий большой компанией (до 12 человек). При поиске используйте фильтры по вместимости и объему багажа.`
+    },
+    {
+      question: 'Какие автомобили можно арендовать?',
+      answer: `Мы сканируем предложения по всем видам аренды транспортных средств, поэтому на Skyscanner вы найдете и бодрые дешевые хэтчбеки, и экзотические спортивные автомобили. Даже дома на колесах и пассажирские фургоны!`
+    },
+    {
+      question: 'У каких автопрокатчиков в г. Баку самые низкие цены?',
+      answer: `По нашим данным, самые низкие цены на аренду автомобилей в г. Баку предлагает Car Hire Baku. В среднем прокат у этой компании стоит 250 ₼ в сутки. На втором по экономичности месте — компания FlexWays со средней ценой 210 ₼ в сутки. На третьем — компания Final Rentals. Средняя стоимость — 261 ₼ в сутки.`
+    },
+    {
+      question: 'Если я лечу в отпуск, стоит ли брать машину напрокат в аэропорту?',
+      answer: `Скорее всего, цены на аренду авто в аэропорту окажутся немного выше, чем в городе. Может действовать и дополнительный сбор. Однако посчитайте стоимость поездки до пункта проката и обратно. Возможно, выгоднее взять машину прямо в терминале.`
+    },
+    {
+      question: 'Могу ли я взять автомобиль всего на один день?',
+      answer: `Да, большинство прокатчиков предлагают фиксированную суточною ставку за аренду авто. Как правило,
+       чтобы избежать дополнительных сборов, вам нужно вернуть машину в течение 24 часов.`
+    },
+      {
+      question: 'Могу ли я взять автомобиль всего на один день?',
+      answer: `Да, большинство прокатчиков предлагают фиксированную суточною ставку за аренду авто. Как правило,
+       чтобы избежать дополнительных сборов, вам нужно вернуть машину в течение 24 часов.`
+    },
+      {
+      question: 'Могу ли я арендовать машину на месяц?',
+      answer: `Да, большинство прокатчиков предлагают фиксированную суточною ставку за аренду авто. Как правило,
+       чтобы избежать дополнительных сборов, вам нужно вернуть машину в течение 24 часов.`
+    },
+  ]
   return (
     <>
       <div id='ht-bg'>
@@ -56,27 +81,15 @@ function Carhire() {
           <p>Прокат автомобилей</p>
         </div>
         <Advice1Hotel />
-        <section className='popular' >
-          <div className='slider-car'>
-            <h2 className='car-section-title' >Популярные направления для аренды авто</h2>
-            <div className='slider-car-buttons' >
-              <div style={page == 1 ? unActiveButton : null} onClick={() => move(0)} >
-                <FaChevronLeft size={13} />
-              </div>
-              <div style={page >= Math.ceil(Allquantity / Quantity1Page) ? unActiveButton : null} onClick={() => move(1)} >
-                <FaChevronRight size={13} />
-              </div>
-            </div>
+        <PopularSection />
+        <SectionCarCompany />
+        <Advice2Car />
+        <div className='flightQuestionSection'  style={{margin:'30px 0 50px 0'}}>
+          <h2>Аренда авто: часто задаваемые вопросы</h2>
+          <div className='flightQuestionBox'>
+            {questions.map((item, i) => <FlightQuestion key={i} q={item} />)}
           </div>
-          <div className="popular-cities">
-            <div ref={boxes1} style={{ transform: `translateX(${windowWidth > 510 ? (page - 1) * -x : 0}px)` }} >
-              {Array.from({ length: Allquantity }).map((_, i) =>
-                <PopularCard key={i} />
-              )}
-
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   )

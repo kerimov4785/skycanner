@@ -2079,7 +2079,26 @@ input[type="checkBox"] {
     flex-basis: calc((100% - 48px)/3) ;
     flex-shrink: 0;
 }
-
+/* company */
+.company-section{
+    margin-top: 10px;
+}
+.company-section div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 70px ;
+    gap: 15px;
+}
+.company-section img{
+    cursor: pointer;
+    border-radius: 10px;
+    width: 120px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .4s;
+}
+.company-section img:hover{
+    box-shadow: rgba(0, 0, 0, 0.524) 0px 3px 8px;
+}
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -2548,6 +2567,13 @@ input[type="checkBox"] {
     .popular-cities{
         overflow-x: scroll;
     }
+    .company-section img{
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .4s;
+}
 }
 @media only screen and (max-width:400px) {
     header>div:first-child>div {
