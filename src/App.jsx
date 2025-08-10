@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 import MainLayout from "./layout/MainLayout"
 import Flight from "./pages/Flight"
 import Main from "./pages/Main"
-import Hotels from "./pages/Hotels"
 import Carhire from "./pages/Carhire"
 import { useState } from "react"
 import { Toaster } from "react-hot-toast"
@@ -13,6 +12,7 @@ import SignUp from "./pages/SignUp"
 import SignIn from "./pages/SignIn"
 import Profile from "./pages/Profile"
 import Saved from "./pages/Saved"
+import Error from "./pages/Error"
 
 function App() {
   return (
@@ -28,13 +28,13 @@ function App() {
           <Route path="/flights" element={<Flight />} />
           <Route path="/flights/transport" element={<Transport />} />
           <Route path="/flights/transport/tickets" element={<Tickets />} />
-          <Route path="/hotels" element={<Hotels />} />
           <Route path="/carhire" element={<Carhire />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/saved" element={<Saved />} />
         </Route>
         <Route path='signUp' element={<SignUp /> } />
         <Route path='signIn' element={<SignIn /> } />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   )
