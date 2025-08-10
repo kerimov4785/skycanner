@@ -23,6 +23,7 @@ function DataContext({ children }) {
     let [user, setUser] = useState(null)
     let [likedTickets, setLikedTickets] = useState([])
 
+
     useEffect(() => {
         getAllFlights()
             .then((item) => setFlights(item))

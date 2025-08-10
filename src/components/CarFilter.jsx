@@ -4,7 +4,7 @@ import { FaAngleDown, FaArrowRight, FaArrowsRotate, FaRotate } from 'react-icons
 function CarFilter() {
     return (
         <>
-            <div className='filterHotel'>
+            <div className='filterCar'>
                 <div>
                     <div className='filter-box2'>
                         <p>Место получения</p>
@@ -29,8 +29,8 @@ function CarFilter() {
                         </div>
                     </div>
                 </div>
-                <div className='buttonSearch2' onClick={() => search()} >
-                    <h3>Поиск</h3>
+                <div className='buttonSearch2' >
+                    <h3>Найти</h3>
                 </div>
             </div>
         </>
