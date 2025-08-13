@@ -11,6 +11,15 @@ async function getAllFlights() {
   }
 }
 
+async function getAllCars() {
+  try {
+    const res = await axios.get(`${BASE_URL}/cars`);
+    return res.data;
+  } catch (err) {
+    console.error("Axios error:", err.message);
+  }
+}
+
 async function addUser(user) {
   try {
     const res = await axios.post(`${BASE_URL}/users`, user)
@@ -67,4 +76,4 @@ async function getLiked(userID) {
     console.error("Axios error:", err.message);
   }
 }
-export { getAllFlights, addUser, checkUser, signIn, addLiked, getLiked }
+export { getAllFlights, addUser, checkUser, signIn, addLiked, getLiked, getAllCars }

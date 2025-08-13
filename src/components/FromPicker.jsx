@@ -14,9 +14,6 @@ function FromPicker({setFromPickerStatus }) {
         }
 
     }
-    if (!flights) {
-        return
-    }
     return (
         <div className='fromDropdown' onClick={(e) => e.stopPropagation()} >
             {flights.filter(item => item.country.toLowerCase().includes(fromPlace.toLowerCase())).map(item => (

@@ -7,8 +7,8 @@ import Loader from '../components/Loader'
 import { AllContext } from '../context/DataContext'
 
 function MainLayout() {
-    let {flights} = useContext(AllContext)
-    if(!flights){
+    let {flights , cars } = useContext(AllContext)
+    if(!flights || !cars){
         return <Loader/>
     }
     return (

@@ -165,17 +165,17 @@ function FlightFilter() {
 
                         </div>
                         <div className='dateInputs' >
-                            <div ref={date1Box} onClick={() => (setDatePicker1(true), window.innerWidth <= 768 ? setMobileDate(true) : null)} className='filter-box'>
+                            <div ref={date1Box} onClick={() => (setDatePicker1(true), window.innerWidth <= 768 ? setMobileDate(true) : null)} className={`filter-box ${datePicker1 ? 'border' : null }`}>
                                 <p ref={date1P} >Туда</p>
                                 <h5 ref={date1H5} >{date1 == 'Добавьте дату' ? date1 : tripType == 'Туда-обратно' && date2 != 'Добавьте дату' && window.innerWidth <= 768 ? `${date1?.format('DD')} ${getMonthName(date1.format('MM'))} - ${date2?.format('DD')} ${getMonthName(date2.format('MM'))}` : date1?.format('YYYY-MM-DD')}</h5>
                                 {datePicker1 && window.innerWidth > 768 ? <DatePicker1 tripType={tripType} date1={date1} date2={date2} setDate1={setDate1} setDate2={setDate2} setDatePicker1={setDatePicker1} /> : null}
                             </div>
-                            <div ref={date2Box} onClick={() => setDatePicker2(true)} style={{ display: tripType == 'В одну сторону' ? 'none' : 'block' }} className='filter-box' >
+                            <div ref={date2Box} onClick={() => setDatePicker2(true)} style={{ display: tripType == 'В одну сторону' ? 'none' : 'block' }} className={`filter-box ${datePicker2 ? 'border' : null }`} >
                                 <p ref={date2P} >Обратно</p>
                                 <h5 ref={date2H5} >{date2 == 'Добавьте дату' ? 'Добавьте дату' : date2?.format('YYYY-MM-DD')}</h5>
                                 {datePicker2 && window.innerWidth > 768 ? <DatePicker2 date1={date1} date2={date2} setDate2={setDate2} setDatePicker2={setDatePicker2} /> : null}
                             </div>
-                            <div className='filter-box last-box ' >
+                            <div className='filter-box last-box' >
                                 <p>Путешественники и класс</p>
                                 <h5>{person} чел., Эконом</h5>
                             </div>

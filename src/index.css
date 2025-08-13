@@ -602,19 +602,18 @@ input[type="checkBox"] {
 .dropdownDate1,
 .dropdownDate2 {
     position: absolute;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     z-index: 3;
     top: calc(100% + 5px);
     background-color: white;
     border-radius: 20px;
     padding-bottom: 40px;
+    transform: translateX(50%);
+    right: calc(50% + 2px);
 }
 
-.dropdownDate1 {
-    right: 0;
-}
-
-.dropdownDate2 {
-    left: 0;
+.border {
+    border: 2px solid var(--blue);
 }
 
 .buttonSaveDate {
@@ -645,6 +644,7 @@ input[type="checkBox"] {
     overflow: hidden;
     max-height: 400px;
     overflow-y: scroll;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .fromDropdown h4,
@@ -1874,7 +1874,7 @@ input[type="checkBox"] {
 .profile {
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 100px 0;
     gap: 150px;
 }
 
@@ -1990,7 +1990,7 @@ input[type="checkBox"] {
     color: var(--blue);
 }
 
-/* hotels */
+/* cars */
 #ht-bg {
     align-items: center;
     flex-direction: column;
@@ -2009,13 +2009,13 @@ input[type="checkBox"] {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .filterCar>div:first-of-type {
     width: 90%;
     border-radius: 13px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .filterCar>div:first-of-type,
@@ -2024,6 +2024,32 @@ input[type="checkBox"] {
     gap: 4px;
 }
 
+.first-box-car {
+    border-bottom-left-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+.last-box-car {
+    border-bottom-right-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.dropwidth {
+    width: calc(100% + 3px);
+    left: -1px;
+}
+
+.timePicker {
+    position: absolute;
+    top: calc(100% + 7px);
+    background-color: white;
+    width: calc(100% + 5px);
+    left: -2px;
+    padding: 5px 0;
+}
+
+
+/* popular */
 .car-section-title {
     font: 600 32px 'Inter';
     margin-bottom: 10px;
@@ -2076,29 +2102,34 @@ input[type="checkBox"] {
 }
 
 .pop-Card {
-    flex-basis: calc((100% - 48px)/3) ;
+    flex-basis: calc((100% - 48px)/3);
     flex-shrink: 0;
 }
+
 /* company */
-.company-section{
+.company-section {
     margin-top: 10px;
 }
+
 .company-section div {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 0 70px ;
+    margin: 30px 0 70px;
     gap: 15px;
 }
-.company-section img{
+
+.company-section img {
     cursor: pointer;
     border-radius: 10px;
     width: 120px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: .4s;
 }
-.company-section img:hover{
+
+.company-section img:hover {
     box-shadow: rgba(0, 0, 0, 0.524) 0px 3px 8px;
 }
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -2287,8 +2318,32 @@ input[type="checkBox"] {
         width: 100%;
     }
 
-    .pop-Card{
+    .pop-Card {
         flex-basis: calc((100% - 24px)/2);
+    }
+
+    .first-box-car {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 13px;
+    }
+
+    .last-box-car {
+        border-top-right-radius: 0px;
+    }
+
+    .second-box-car {
+        border-bottom-left-radius: 13px;
+    }
+
+    .dropdownDate1 {
+        transform: translateX(0);
+        right: initial;
+        left: 0;
+    }
+
+    .dropdownDate2 {
+        transform: translateX(0);
+        right: 0;
     }
 }
 
@@ -2434,10 +2489,11 @@ input[type="checkBox"] {
 }
 
 @media only screen and (max-width:680px) {
-    .pop-Card{
+    .pop-Card {
         flex-basis: 100%;
     }
 }
+
 @media only screen and (max-width:640px) {
     .flight-card {
         flex-direction: column;
@@ -2556,25 +2612,38 @@ input[type="checkBox"] {
         flex: initial;
         width: calc((100% - 4px)/2);
     }
+
+    .second-box-car {
+        border-bottom-left-radius: 0px;
+    }
+
+    .four-box-car {
+        border-bottom-left-radius: 13px;
+    }
 }
+
 @media only screen and (max-width:510px) {
-    .car-section-title{
+    .car-section-title {
         font-size: 24px;
     }
-    .slider-car-buttons{
+
+    .slider-car-buttons {
         display: none;
     }
-    .popular-cities{
+
+    .popular-cities {
         overflow-x: scroll;
     }
-    .company-section img{
-    cursor: pointer;
-    border-radius: 10px;
-    width: 100px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: .4s;
+
+    .company-section img {
+        cursor: pointer;
+        border-radius: 10px;
+        width: 100px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: .4s;
+    }
 }
-}
+
 @media only screen and (max-width:400px) {
     header>div:first-child>div {
         gap: 0;

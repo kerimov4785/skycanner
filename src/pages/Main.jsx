@@ -7,7 +7,6 @@ import Question from '../components/Question'
 import { AllContext } from '../context/DataContext'
 function Main() {
     let {user} = useContext(AllContext)
-    console.log(user);
     
     let img1 = 'assets/image.png'
     let img2 = 'assets/image2.png'
