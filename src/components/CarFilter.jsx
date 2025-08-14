@@ -78,7 +78,7 @@ function CarFilter() {
                         <div ref={time1Box} className={`filter-box2 ${time1PickerStatus ? 'border' : null} `} onClick={() => (setTime1PickerStatus(true))} >
                             <p ref={time1P} >Время</p>
                             <h5 ref={time1H5} >{time1Car == '' ? '10:00' : time1Car.format('HH:mm')}</h5>
-                            {time1PickerStatus && window.innerWidth > 540 ? <TimePicker1Car setTime1PickerStatus={setTime1PickerStatus} /> : null}
+                            {time1PickerStatus? <TimePicker1Car setTime1PickerStatus={setTime1PickerStatus} /> : null}
                         </div>
                         <div ref={date2Box} className={`filter-box2 four-box-car ${date2PickerStatus ? 'border' : null} `} onClick={() => (setDate2PickerStatus(true) , setMobileDate2(true) )} >
                             <p ref={date2P}>Дата возврата</p>
@@ -88,7 +88,7 @@ function CarFilter() {
                         <div ref={time2Box} className={`filter-box2 last-box-car ${time2PickerStatus ? 'border' : null} `} onClick={() => (setTime2PickerStatus(true))} >
                             <p ref={time2P} >Время</p>
                             <h5 ref={time2H5} >{time2Car == '' ? '18:00' : time2Car.format('HH:mm')}</h5>
-                            {time2PickerStatus && window.innerWidth > 540 ? <TimePicker2Car setTime2PickerStatus={setTime2PickerStatus} /> : null}
+                            {time2PickerStatus ? <TimePicker2Car setTime2PickerStatus={setTime2PickerStatus} /> : null}
                         </div>
                     </div>
                 </div>

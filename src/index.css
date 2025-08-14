@@ -2046,6 +2046,7 @@ input[type="checkBox"] {
     width: calc(100% + 5px);
     left: -2px;
     padding: 5px 0;
+    z-index: 3;
 }
 
 
