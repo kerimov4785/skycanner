@@ -919,7 +919,8 @@ input[type="checkBox"] {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 20px;
     align-items: end;
     top: 0;
     left: 0;

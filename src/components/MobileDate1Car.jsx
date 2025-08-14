@@ -22,7 +22,7 @@ function MobileDate1Car({ setMobileDate1 }) {
                         <h5>{date1Car == '' ? '2025-08-10' : date1Car.format('YYYY-MM-DD')}</h5>
                     </div>
                 </div>
-                <div style={{width:'100%'}} >
+                <div >
                     <LocalizationProvider dateAdapter={AdapterDayjs}  >
                         <DateCalendar sx={{
                             width: '100%',       // делаем ширину 100%
