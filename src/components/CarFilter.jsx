@@ -6,6 +6,7 @@ import DatePicker1Car from './DatePicker1Car';
 import DatePicker2Car from './DatePicker2Car';
 import TimePicker1Car from './TimePicker1Car';
 import TimePicker2Car from './TimePicker2Car';
+import MobileDate1Car from './MobileDate1Car';
 
 function CarFilter() {
     let { date1Car, date2Car, time1Car, time2Car, cars, fromPlaceCar, setFromPlaceCar } = useContext(AllContext)
@@ -15,6 +16,9 @@ function CarFilter() {
     let [date2PickerStatus, setDate2PickerStatus] = useState(false)
     let [time1PickerStatus, setTime1PickerStatus] = useState(false)
     let [time2PickerStatus, setTime2PickerStatus] = useState(false)
+    let [mobileFrom, setMobileFrom] = useState(false)
+    let [mobileDate1, setMobileDate1] = useState(false)
+    let [mobileDate2, setMobileDate2] = useState(false)
 
     let inp1Ref = useRef(null)
     let fromP = useRef(null)
@@ -52,6 +56,7 @@ function CarFilter() {
 
     return (
         <>
+            { mobileDate1  && window.innerWidth <= 540  ? <MobileDate1Car setMobileDate1={setMobileDate1} /> : null }
             <div className='filterCar'>
                 <div>
                     <div ref={fromBox} className='filter-box2 first-box-car' onClick={() => (inp1Ref.current.focus(), setFromPickerStatus(true), setFromPlaceCar(''))} >
@@ -60,9 +65,9 @@ function CarFilter() {
                         {fromPickerStatus && window.innerWidth > 540 ? <Car_FromPicker setFromPickerStatus={setFromPickerStatus} /> : null}
                     </div>
                     <div className='dateHotels' >
-                        <div ref={date1Box} className={`filter-box2 second-box-car ${date1PickerStatus ? 'border' : null} `} onClick={() => (setDate1PickerStatus(true))} >
+                        <div ref={date1Box} className={`filter-box2 second-box-car ${date1PickerStatus ? 'border' : null} `} onClick={() => (setDate1PickerStatus(true) , setMobileDate1(true) )} >
                             <p ref={date1P} >Дата получения</p>
-                            <h5 ref={date1H5} >{date1Car == '' ? '2025-08-10' : date1Car?.format('YYYY-MM-DD')}</h5>
+                            <h5 ref={date1H5} >{date1Car == '' ? '2025-08-10' : date1Car.format('YYYY-MM-DD')}</h5>
                             {date1PickerStatus && window.innerWidth > 540 ? <DatePicker1Car setDate1PickerStatus={setDate1PickerStatus} /> : null}
                         </div>
                         <div ref={time1Box} className={`filter-box2 ${time1PickerStatus ? 'border' : null} `} onClick={() => (setTime1PickerStatus(true))} >
@@ -72,7 +77,7 @@ function CarFilter() {
                         </div>
                         <div ref={date2Box} className={`filter-box2 four-box-car ${date2PickerStatus ? 'border' : null} `} onClick={() => (setDate2PickerStatus(true))} >
                             <p ref={date2P}>Дата возврата</p>
-                            <h5 ref={date2H5}>{date2Car == '' ? '2025-08-20' : date2Car?.format('YYYY-MM-DD')}</h5>
+                            <h5 ref={date2H5}>{date2Car == '' ? '2025-08-20' : date2Car.format('YYYY-MM-DD')}</h5>
                             {date2PickerStatus && window.innerWidth > 540 ? <DatePicker2Car setDate2PickerStatus={setDate2PickerStatus} /> : null}
                         </div>
                         <div ref={time2Box} className={`filter-box2 last-box-car ${time2PickerStatus ? 'border' : null} `} onClick={() => (setTime2PickerStatus(true))} >

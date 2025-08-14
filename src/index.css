@@ -631,7 +631,12 @@ input[type="checkBox"] {
 .buttonSaveDate:hover {
     background-color: #165394;
 }
-
+.buttonMobile{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+}
 /* frompciker */
 .fromDropdown {
     position: absolute;
@@ -845,7 +850,7 @@ input[type="checkBox"] {
 }
 
 .mobileFrom>h3,
-.mobileDate>h3,
+.mobileDate > div >h3,
 .mobileTypeDropdown>h3 {
     text-align: center;
     margin: 20px;
@@ -853,7 +858,7 @@ input[type="checkBox"] {
 }
 
 .mobileFrom>svg,
-.mobileDate>svg,
+.mobileDate > div >svg,
 .mobileTypeDropdown>svg {
     position: absolute;
     top: 22px;
@@ -912,6 +917,10 @@ input[type="checkBox"] {
 /* mobiledate */
 .mobileDate {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
     top: 0;
     left: 0;
     height: 100vh;
@@ -941,7 +950,7 @@ input[type="checkBox"] {
 .mobileDateInputs>div {
     border-radius: 13px;
     background-color: #eff3f8;
-    border: 2px solid #eff3f8;
+    border: 2px solid var(--blue) ;
     padding: 11px 15px;
     flex: 1;
     margin-top: 15px;
@@ -2173,6 +2182,10 @@ input[type="checkBox"] {
         display: none;
     }
 
+    .filterCar {
+        margin-bottom: 30px;
+    }
+
 }
 
 @media only screen and (max-width: 1030px) {
@@ -2345,6 +2358,7 @@ input[type="checkBox"] {
         transform: translateX(0);
         right: 0;
     }
+
 }
 
 @media only screen and (max-width: 850px) {
