@@ -133,7 +133,7 @@ function FlightFilter() {
     return (
         <>
             {mobileFrom && window.innerWidth <= 768 ? <MobileFrom setMobileFrom={setMobileFrom} toPlace={toPlace} setFromCity={setFromCity} setFromPickerStatus={setFromPickerStatus} setFromPlace={setFromPlace} /> : null}
-            {mobileTo && window.innerWidth <= 768 ? <MobileTo setMobileTo={setMobileTo} fromPlace={fromPlace} setToCity={setToCity} setToPickerStatus={setToPickerStatus} setToPlace={setToPlace} /> : null}
+            {mobileTo && window.innerWidth <= 768 ? <MobileTo setMobileTo={setMobileTo} /> : null}
             {mobileDate && window.innerWidth <= 768 ? <MobileDate setMobileDate={setMobileDate} /> : null}
             <div className='filterFlight' >
                 <div className='tripType' >

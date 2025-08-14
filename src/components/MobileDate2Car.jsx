@@ -4,21 +4,21 @@ import React, { useContext } from 'react'
 import { FaChevronLeft } from 'react-icons/fa6'
 import { AllContext } from '../context/DataContext'
 
-function MobileDate1Car({ setMobileDate1 }) {
-    let { date1Car, setDate1Car } = useContext(AllContext)
+function MobileDate2Car({ setMobileDate2 }) {
+    let { date2Car, setDate2Car } = useContext(AllContext)
 
     function handleValue(newvalue) {
-        setDate1Car(newvalue)
+        setDate2Car(newvalue)
     }
 
     return (
         <div className='mobileDate'>
-            <FaChevronLeft onClick={() => setMobileDate1(false)} />
+            <FaChevronLeft onClick={() => setMobileDate2(false)} />
             <h3>Выбрать даты</h3>
             <div className='mobileDateInputs'>
                 <div >
                     <p>Дата получения</p>
-                    <h5>{date1Car == '' ? '2025-08-10' : date1Car.format('YYYY-MM-DD')}</h5>
+                    <h5>{date2Car == '' ? '2025-08-10' : date2Car.format('YYYY-MM-DD')}</h5>
                 </div>
             </div>
             <div >
@@ -38,12 +38,12 @@ function MobileDate1Car({ setMobileDate1 }) {
                         '.css-su1ucx-MuiYearCalendar-root': {
                             width: '100%'
                         }
-                    }} value={date1Car != '' ? date1Car : null} onChange={handleValue} />
+                    }} value={date2Car != '' ? date2Car : null} onChange={handleValue} />
                 </LocalizationProvider>
             </div>
-            <div className='buttonSaveDate' onClick={() => setMobileDate1(false)}>Применить</div>
+            <div className='buttonSaveDate' onClick={() => setMobileDate2(false)} >Применить</div>
         </div>
     )
 }
 
-export default MobileDate1Car
+export default MobileDate2Car
