@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function PopularCard() {
+function PopularCard({city}) {
     return (
         <Link className='pop-Card' >
-            <img src={`/assets/almaty.png`} alt="" />
+            <img src={`/assets/${city.cityImage}`} alt="" />
             <div>
-                <h3>Paris</h3>
+                <h3>{city.city}</h3>
                 <div>
-                    <h4>Авиабилеты • <span>Прямые</span></h4>
-                    <p>120$</p>
+                    <h4>{city.country} • <span style={{fontSize:"12px"}} >Самый популярный тип автомобиля: Эконом-класс</span></h4>
+                    <p>{city.cars[0].price_per_day}$</p>
                 </div>
             </div>
         </Link>

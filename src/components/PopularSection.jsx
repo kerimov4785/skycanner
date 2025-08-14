@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import PopularCard from './PopularCard'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
+import { AllContext } from '../context/DataContext'
 
 function PopularSection() {
+    let { cars } = useContext(AllContext)
+    let popularCity = cars.filter(item => item.popular)    
     let [x, setX] = useState(0)
     let boxes1 = useRef(null)
     let [page, setPage] = useState(1)
@@ -52,8 +55,8 @@ function PopularSection() {
             </div>
             <div className="popular-cities">
                 <div ref={boxes1} style={{ transform: `translateX(${windowWidth > 510 ? (page - 1) * -x : 0}px)` }} >
-                    {Array.from({ length: Allquantity }).map((_, i) =>
-                        <PopularCard key={i} />
+                    {popularCity.map((item, i) =>
+                        <PopularCard key={i} city={item} />
                     )}
 
                 </div>

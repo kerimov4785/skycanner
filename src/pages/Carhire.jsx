@@ -6,12 +6,12 @@ import Advice1Hotel from '../components/Advice1Hotel'
 import PopularCard from '../components/PopularCard'
 import PopularSection from '../components/PopularSection'
 import Advice2 from '../components/Advice2'
-import Advice2Car from './Advice2Car'
 import SectionCarCompany from '../components/SectionCarCompany'
 import FlightQuestion from '../components/FlightQuestion'
 import { useContext } from 'react'
 import { AllContext } from '../context/DataContext'
 import Loader from '../components/Loader'
+import Advice2Car from '../components/Advice2Car'
 
 function Carhire() {
   let { questions, cars } = useContext(AllContext)
