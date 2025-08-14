@@ -13,37 +13,35 @@ function MobileDate1Car({ setMobileDate1 }) {
 
     return (
         <div className='mobileDate'>
-            <div style={{width:'100%'}} >
-                <FaChevronLeft onClick={() => setMobileDate1(false)} />
-                <h3>Выбрать даты</h3>
-                <div className='mobileDateInputs'>
-                    <div >
-                        <p>Дата получения</p>
-                        <h5>{date1Car == '' ? '2025-08-10' : date1Car.format('YYYY-MM-DD')}</h5>
-                    </div>
-                </div>
+            <FaChevronLeft onClick={() => setMobileDate1(false)} />
+            <h3>Выбрать даты</h3>
+            <div className='mobileDateInputs'>
                 <div >
-                    <LocalizationProvider dateAdapter={AdapterDayjs}  >
-                        <DateCalendar sx={{
-                            width: '100%',       // делаем ширину 100%
-                            maxWidth: 'none',    // убираем ограничение
-                            '.MuiDateCalendar-root': {
-                                width: '100%',
-                            },
-                            '.css-1rl1vrc-MuiDayCalendar-header': {
-                                justifyContent: 'space-between',
-                            },
-                            '.css-1pv2de5-MuiDayCalendar-weekContainer': {
-                                justifyContent: 'space-between',
-                            },
-                            '.css-su1ucx-MuiYearCalendar-root': {
-                                width: '100%'
-                            }
-                        }} value={date1Car != '' ? date1Car : null} onChange={handleValue} />
-                    </LocalizationProvider>
+                    <p>Дата получения</p>
+                    <h5>{date1Car == '' ? '2025-08-10' : date1Car.format('YYYY-MM-DD')}</h5>
                 </div>
             </div>
-            <div className='buttonSaveDate buttonMobile ' >Применить</div>
+            <div >
+                <LocalizationProvider dateAdapter={AdapterDayjs}  >
+                    <DateCalendar sx={{
+                        width: '100%',       // делаем ширину 100%
+                        maxWidth: 'none',    // убираем ограничение
+                        '.MuiDateCalendar-root': {
+                            width: '100%',
+                        },
+                        '.css-1rl1vrc-MuiDayCalendar-header': {
+                            justifyContent: 'space-between',
+                        },
+                        '.css-1pv2de5-MuiDayCalendar-weekContainer': {
+                            justifyContent: 'space-between',
+                        },
+                        '.css-su1ucx-MuiYearCalendar-root': {
+                            width: '100%'
+                        }
+                    }} value={date1Car != '' ? date1Car : null} onChange={handleValue} />
+                </LocalizationProvider>
+            </div>
+            <div className='buttonSaveDate' >Применить</div>
         </div>
     )
 }
