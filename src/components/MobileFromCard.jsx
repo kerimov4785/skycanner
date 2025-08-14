@@ -14,7 +14,7 @@ function MobileFromCard({ setMobileFromCar }) {
     return (
         <div className='mobileFrom' >
             <FaChevronLeft onClick={() => setMobileFromCar(false)} />
-            <h3>Выберите, откуда вылетаете</h3>
+            <h3>Выберите, откуда арендуете</h3>
             <div className='mobileFromInput' onClick={() => (fromMob.current.focus())}  >
                 <p>Откуда:</p>
                 <input onChange={(e) => setFromPlaceCar(e.target.value)} value={fromPlaceCar} ref={fromMob} type="text" placeholder='Город или аэропорт' />
