@@ -28,11 +28,11 @@ function PriceCar({min,max, value, setValue }) {
                 <div className='price-car-info' >
                     <div>
                         <p>Минимум</p>
-                        <div>{value[0]}$</div>
+                        <div>{value[0]}₼</div>
                     </div>
                     <div>
                         <p>Максимум</p>
-                        <div>{value[1]}$</div>
+                        <div>{value[1]}₼</div>
                     </div>
                 </div>
             </div>

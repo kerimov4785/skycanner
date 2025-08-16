@@ -4,7 +4,7 @@ import { AllContext } from '../context/DataContext'
 import { useLocation } from 'react-router-dom';
 import CheckAirline from './CheckAirline';
 
-function AviaCompany({toCity,airlines,setCheckedAirline,checkedAirline}) {
+function AviaCompany({airlines,setCheckedAirline,checkedAirline}) {
     let [isOpen, setIsOpen] = useState(true)
 
     return (

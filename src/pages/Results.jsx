@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import CarCard from '../components/CarCard'
 import Banner1 from '../components/Banner1'
 import Banner3 from '../components/Banner3'
+import Company from '../components/Company'
 
 function Results() {
     let location = useLocation()
@@ -18,6 +19,8 @@ function Results() {
     let time1 = params.get('time1')
     let date2 = params.get('date2')
     let time2 = params.get('time2')
+    let [checkedCompany, setCheckedCompany] = useState([])
+    let [checkedTransmission, setCheckedTransmission] = useState(['Автоматическая','Механическая'])
     let [windowWidth, setWindowWidth] = useState(window.innerWidth)
     let [filterStatus, setFilterStatus] = useState(false)
     let filteredCars = cars.find(item => item.city == from).cars.sort((a, b) =>
@@ -25,6 +28,12 @@ function Results() {
     )
     let min = filteredCars[0].price_per_day
     let max = filteredCars[4].price_per_day
+    let company = filteredCars.map(item => item.rental_company)
+    let allCompany = [...new Set(company)]
+
+    useEffect(() => {
+        setCheckedCompany(allCompany)
+    }, [location])
     window.onresize = function () {
         setWindowWidth(window.innerWidth)
     }
@@ -32,6 +41,10 @@ function Results() {
     useEffect(() => {
         setValue([min, max])
     }, [])
+    let allFilteredCars = filteredCars.filter(item => 
+        checkedCompany.includes(item.rental_company) && 
+        +item.price_per_day <= value[1] && +item.price_per_day >= value[0] && checkedTransmission.includes(item.transmission[0]) )
+
     return (
         <>
             <div className='bg-tickets'>
@@ -46,8 +59,9 @@ function Results() {
                                 <p onClick={() => setFilterStatus(false)} >Готово</p>
                             </div>
                             <PlaceQuantity />
-                            <Transmisson />
+                            <Transmisson checkedTransmission={checkedTransmission} setCheckedTransmission={setCheckedTransmission} />
                             <PriceCar min={min} max={max} value={value} setValue={setValue} />
+                            <Company allCompany={allCompany} checkedCompany={checkedCompany} setCheckedCompany={setCheckedCompany} />
                         </div>
                         <div className='car-info' >
                             <div className='info-mobile-title'>
@@ -58,10 +72,10 @@ function Results() {
                                 <h5>{`Результаты: ${filteredCars.length} из ${8}`}</h5>
                             </div>
                             <div className='ticket-box'>
-                                {filteredCars.length != 0 ? filteredCars
+                                {allFilteredCars.length != 0 ? allFilteredCars
                                     .map(item =>
                                         <CarCard from={from} key={item.id} carInfo={item} />
-                                    ) : <div></div>}
+                                    ) : <div className='none' ><h3>No cars found for these requests :(</h3></div>}
                             </div>
                         </div>
                         <div className='banners' >

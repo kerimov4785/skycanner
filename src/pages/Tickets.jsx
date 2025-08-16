@@ -85,7 +85,7 @@ function Tickets() {
                             <button>Остелижать цены</button>
                             <Transfer checkedWayType={checkedWayType} setCheckedWayType={setCheckedWayType} />
                             <TimePicker tripType={tripType} value={value} value2={value2} setValue={setValue} setValue2={setValue2} />
-                            <AviaCompany toCity={toCity} airlines={airlines} checkedAirline={checkedAirline} setCheckedAirline={setCheckedAirline} />
+                            <AviaCompany airlines={airlines} checkedAirline={checkedAirline} setCheckedAirline={setCheckedAirline} />
                         </div>
                         <div className='ticket-info' >
                             <div className='info-mobile-title'>
