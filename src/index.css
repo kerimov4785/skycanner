@@ -631,6 +631,7 @@ input[type="checkBox"] {
 .buttonSaveDate:hover {
     background-color: #165394;
 }
+
 /* frompciker */
 .fromDropdown {
     position: absolute;
@@ -941,7 +942,7 @@ input[type="checkBox"] {
 .mobileDateInputs>div {
     border-radius: 13px;
     background-color: #eff3f8;
-    border: 2px solid var(--blue) ;
+    border: 2px solid var(--blue);
     padding: 11px 15px;
     flex: 1;
     margin-top: 15px;
@@ -1191,7 +1192,10 @@ input[type="checkBox"] {
 
 .transfer-box,
 .time-box,
-.company-box {
+.company-box,
+.place-box,
+.transmission-box,
+.price-box {
     position: relative;
     border-bottom: 1px solid #9ea2a7;
     padding-bottom: 25px;
@@ -1200,9 +1204,16 @@ input[type="checkBox"] {
     margin-top: 20px;
 }
 
+.place-box {
+    margin-top: 5px;
+}
+
 .transfer-box svg,
 .time-box svg,
-.company-box svg {
+.company-box svg,
+.place-box svg,
+.transmission-box svg,
+.price-box svg {
     position: absolute;
     top: 4px;
     right: 0px;
@@ -1230,7 +1241,8 @@ input[type="checkBox"] {
     font: 400 16px 'Inter';
 }
 
-.time-box .slider {
+.time-box .slider,
+.price-box .slider {
     display: flex;
     justify-content: center;
     margin-top: 8px;
@@ -1241,12 +1253,14 @@ input[type="checkBox"] {
 }
 
 /* ticket */
-.ticket-info {
+.ticket-info,
+.car-info {
     margin-left: 20px;
     flex: 1;
 }
 
-.ticket-info #info h5 {
+.ticket-info #info h5,
+.car-info #info h5 {
     cursor: pointer;
     position: relative;
     font: 400 15px 'Inter';
@@ -1284,6 +1298,10 @@ input[type="checkBox"] {
     margin-top: 20px;
 }
 
+.car-info #info {
+    margin-top: 0px;
+}
+
 .ticket-box {
     display: flex;
     flex-direction: column;
@@ -1291,7 +1309,8 @@ input[type="checkBox"] {
     gap: 8px;
 }
 
-.flight-card {
+.flight-card,
+.car-card {
     position: relative;
     cursor: pointer;
     border-radius: 10px;
@@ -1303,7 +1322,8 @@ input[type="checkBox"] {
     transition: .4s;
 }
 
-.flight-card:hover {
+.flight-card:hover,
+.car-card:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.447);
 
 }
@@ -1319,7 +1339,8 @@ input[type="checkBox"] {
 }
 
 .card-col-1,
-.card-way2-col-1 {
+.card-way2-col-1,
+.car-card-col-1 {
     width: 67%;
 }
 
@@ -1434,7 +1455,8 @@ input[type="checkBox"] {
 }
 
 .card-col-2 button,
-.banner1 button {
+.banner1 button,
+.car-card-col-2 button {
     cursor: pointer;
     border: none;
     background-color: var(--darkblue);
@@ -1450,6 +1472,10 @@ input[type="checkBox"] {
 
 .card-col-2 button {
     width: 160px;
+}
+
+.car-card-col-2 button {
+    width: 100%;
 }
 
 .like {
@@ -2047,7 +2073,7 @@ input[type="checkBox"] {
     left: -2px;
     padding: 5px 0;
     z-index: 3;
-    border: 2px solid var(--blue) ;
+    border: 2px solid var(--blue);
 }
 
 
@@ -2132,6 +2158,132 @@ input[type="checkBox"] {
     box-shadow: rgba(0, 0, 0, 0.524) 0px 3px 8px;
 }
 
+/* filter-Car */
+
+.place-box>div {
+    display: flex;
+    gap: 10px;
+}
+
+.place-box>div>div {
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid #b3b3b3;
+    padding: 6px 14px;
+    font: 400 14px 'Inter';
+}
+
+.place-box>div>div:hover {
+    border-color: #161616;
+}
+
+.place-box>.filter-title {
+    margin-bottom: 15px;
+}
+
+.transmission-box>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transmission-box>div:last-child>div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font: 400 15px 'Inter';
+    color: #161616;
+    cursor: pointer;
+}
+
+.price-car-info {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.price-car-info p {
+    font: 600 13px 'Inter';
+    margin-bottom: 5px;
+}
+
+.price-car-info>div {
+    flex: 1;
+}
+
+.price-car-info>div>div {
+    background-color: white;
+    padding: 8px;
+    font: 400 14px 'Inter';
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+}
+
+.car-card-col-1,
+.car-card-col-2 {
+    padding: 15px;
+    background-color: white;
+}
+
+.car-card-col-2 {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.car-card-col-1>div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.car-card-col-1>div:first-of-type h3 {
+    font: 600 22px 'Inter';
+    color: #161616;
+}
+
+.car-card-col-1>div:first-of-type~p {
+    font: 300 13px 'Inter';
+    margin-top: 3px;
+}
+
+.car-card-col-1>div:first-of-type img {
+    width: 70px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.car-card-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.car-card-info>div {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.car-card-info>div>div {
+    border-radius: 7px;
+    padding: 7px 10px;
+    background-color: #ebebeb;
+    font: 400 12px 'Inter';
+}
+
+.car-card-info img {
+    width: 180px;
+}
+
+.car-card-col-2 .car-price {
+    font: 400 26px 'Inter';
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -2147,7 +2299,8 @@ input[type="checkBox"] {
         display: none;
     }
 
-    .ticket-info {
+    .ticket-info,
+    .car-info {
         flex: initial;
         width: 750px;
     }
@@ -2237,11 +2390,13 @@ input[type="checkBox"] {
         display: none;
     }
 
-    .ticket-info #info {
+    .ticket-info #info,
+    .car-info #info {
         margin-top: 8px;
     }
 
-    .ticket-info {
+    .ticket-info,
+    .car-info {
         width: 100%;
         margin: 0;
     }
@@ -2502,13 +2657,15 @@ input[type="checkBox"] {
 }
 
 @media only screen and (max-width:640px) {
-    .flight-card {
+    .flight-card ,.car-card {
         flex-direction: column;
     }
 
     .card-way2-col-1,
     .card-col-2,
-    .card-col-1 {
+    .card-col-1 ,
+    .car-card-col-1,
+    .car-card-col-2 {
         width: 100%;
     }
 
@@ -2517,11 +2674,15 @@ input[type="checkBox"] {
         padding: 45px 0 30px 0;
     }
 
-    .card-col-2 {
+    .card-col-2 ,.car-card-col-2 {
         flex-direction: row;
         gap: 20px;
         justify-content: end;
         padding: 15px 20px;
+    }
+    .car-card-col-2 button{
+        max-width: 140px;
+
     }
 }
 
@@ -2546,6 +2707,13 @@ input[type="checkBox"] {
 
     .adviceBox3 {
         flex-direction: column;
+    }
+    .car-card-col-1 img {
+        width: 120px;
+        height: 80px;
+    }
+    .car-card-col-2 .car-price{
+        font-size: 22px;
     }
 
     .transportFilter,

@@ -13,6 +13,7 @@ import SignIn from "./pages/SignIn"
 import Profile from "./pages/Profile"
 import Saved from "./pages/Saved"
 import Error from "./pages/Error"
+import Results from "./pages/Results"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/flights/transport" element={<Transport />} />
           <Route path="/flights/transport/tickets" element={<Tickets />} />
           <Route path="/carhire" element={<Carhire />} />
+          <Route path="/carhire/results" element={<Results />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/saved" element={<Saved />} />
         </Route>

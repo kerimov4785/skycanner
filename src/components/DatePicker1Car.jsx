@@ -5,17 +5,20 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers'
 
-function DatePicker1Car({setDate1PickerStatus}) {
-    let { date1Car, setDate1Car } = useContext(AllContext)
-     
+function DatePicker1Car({ setDate1PickerStatus }) {
+    let { date1Car, setDate1Car ,date2Car , setDate2Car} = useContext(AllContext)
+
     function handleChange(newValue) {
-        setDate1Car(newValue)        
+        if (((date2Car.$M < newValue.$M) || (date2Car.$M == newValue.$M && date2Car.$D <= newValue.$D))) {
+            setDate2Car('')
+        }
+        setDate1Car(newValue)
     };
     return (
         <>
             <div className='dropdownDate1' onClick={(e) => e.stopPropagation()}>
                 <LocalizationProvider dateAdapter={AdapterDayjs} >
-                    <DateCalendar value={date1Car != '' ? date1Car : null}  onChange={handleChange} />
+                    <DateCalendar value={date1Car != '' ? date1Car : null} onChange={handleChange} />
                 </LocalizationProvider>
                 <div className='buttonSaveDate' onClick={() => setDate1PickerStatus(false)} >Применить</div>
             </div>
