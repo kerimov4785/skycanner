@@ -2284,6 +2284,44 @@ input[type="checkBox"] {
     font: 400 26px 'Inter';
 }
 
+/* error page */
+
+.error {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.error svg {
+    width: 250px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.error h2 {
+    font: 600 36px 'Inter';
+    text-align: center;
+}
+
+.error p {
+    font: 400 15px 'Inter';
+    max-width: 500px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.error button {
+    cursor: pointer;
+    padding: 7px 10px;
+    border: none;
+    font: 600 15px 'Inter';
+    color: white !important;
+    background-color: var(--darkblue);
+    border-radius: 6px;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -2657,13 +2695,15 @@ input[type="checkBox"] {
 }
 
 @media only screen and (max-width:640px) {
-    .flight-card ,.car-card {
+
+    .flight-card,
+    .car-card {
         flex-direction: column;
     }
 
     .card-way2-col-1,
     .card-col-2,
-    .card-col-1 ,
+    .card-col-1,
     .car-card-col-1,
     .car-card-col-2 {
         width: 100%;
@@ -2674,13 +2714,15 @@ input[type="checkBox"] {
         padding: 45px 0 30px 0;
     }
 
-    .card-col-2 ,.car-card-col-2 {
+    .card-col-2,
+    .car-card-col-2 {
         flex-direction: row;
         gap: 20px;
         justify-content: end;
         padding: 15px 20px;
     }
-    .car-card-col-2 button{
+
+    .car-card-col-2 button {
         max-width: 140px;
 
     }
@@ -2708,11 +2750,13 @@ input[type="checkBox"] {
     .adviceBox3 {
         flex-direction: column;
     }
+
     .car-card-col-1 img {
         width: 120px;
         height: 80px;
     }
-    .car-card-col-2 .car-price{
+
+    .car-card-col-2 .car-price {
         font-size: 22px;
     }
 
@@ -2800,6 +2844,10 @@ input[type="checkBox"] {
 @media only screen and (max-width:510px) {
     .car-section-title {
         font-size: 24px;
+    }
+
+    .error h2 {
+        font-size: 28px;
     }
 
     .slider-car-buttons {

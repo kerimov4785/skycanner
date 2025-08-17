@@ -16,6 +16,8 @@ function Results() {
     let { cars } = useContext(AllContext)
     let from = params.get('from')
     let date1 = params.get('date1')
+    console.log(date1.slice(0,10));
+    
     let time1 = params.get('time1')
     let date2 = params.get('date2')
     let time2 = params.get('time2')
@@ -46,7 +48,10 @@ function Results() {
         +item.price_per_day <= value[1] && 
         +item.price_per_day >= value[0] && 
         checkedTransmission.includes(item.transmission[0]) && 
-        true
+        date1.slice(0,10) == item.rental_time.slice(0,10) &&
+        date2.slice(0,10) == item.return_time.slice(0,10) &&
+        time1 == item.rental_time.slice(11) &&
+        time2 == item.return_time.slice(11) 
     )
 
     return (
