@@ -11,6 +11,7 @@ import TransportFilter from './TransportFilter'
 import TicketFilter from './TicketFilter'
 import { AllContext } from '../context/DataContext'
 import CarFilter from './CarFilter'
+import CarFilterHeader from './CarFilterHeader'
 
 function Header() {
     let location = useLocation()
@@ -66,6 +67,9 @@ function Header() {
         }
         if (location.pathname == '/carhire') {
             return <CarFilter />
+        }
+        if (location.pathname == '/carhire/results'){
+            return <CarFilterHeader />
         }
     }
     return (

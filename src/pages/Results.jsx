@@ -43,7 +43,11 @@ function Results() {
     }, [])
     let allFilteredCars = filteredCars.filter(item => 
         checkedCompany.includes(item.rental_company) && 
-        +item.price_per_day <= value[1] && +item.price_per_day >= value[0] && checkedTransmission.includes(item.transmission[0]) )
+        +item.price_per_day <= value[1] && 
+        +item.price_per_day >= value[0] && 
+        checkedTransmission.includes(item.transmission[0]) && 
+        true
+    )
 
     return (
         <>
