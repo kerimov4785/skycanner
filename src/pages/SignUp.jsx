@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { addUser, checkUser } from '../services/flightServices'
 import { data, Link, useNavigate } from 'react-router-dom'
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 function SignUp() {
     let activeButtonCSS = { color: "white", background: "#0062e3" }
@@ -9,6 +10,8 @@ function SignUp() {
     let [emailValue, setEmailValue] = useState('')
     let [passwordValue, setPasswordValue] = useState('')
     let [password2Value, setPassword2Value] = useState('')
+    let [passStatus1, setPassStatus1] = useState(true)
+    let [passStatus2, setPassStatus2] = useState(true)
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
@@ -17,7 +20,7 @@ function SignUp() {
             email: emailValue,
             password: passwordValue,
             image: 'user1.png',
-            saved:[]
+            saved: []
         }
         if (!emailValue || !password2Value || !passwordValue) {
             return
@@ -55,12 +58,18 @@ function SignUp() {
                     </div>
                     <div>
                         <div className='signInput' >
+                            <div onClick={() => setPassStatus1(!passStatus1) } >
+                                {passStatus1 ? <FaEye fill='#161616' /> : <FaEyeSlash fill='#161616' />}
+                            </div>
                             <p>Пароль</p>
-                            <input onChange={(e) => setPasswordValue(e.target.value)} type="text" placeholder='Укажите пароль' />
+                            <input onChange={(e) => setPasswordValue(e.target.value)} type={!passStatus1 ? 'text' : 'password'} placeholder='Укажите пароль' />
                         </div>
                         <div className='signInput' >
+                            <div onClick={() => setPassStatus2(!passStatus2) } >
+                                {passStatus2 ? <FaEye fill='#161616' /> : <FaEyeSlash fill='#161616' />}
+                            </div>
                             <p>Повторите пароль</p>
-                            <input onChange={(e) => setPassword2Value(e.target.value)} type="text" placeholder='Укажите пароль' />
+                            <input onChange={(e) => setPassword2Value(e.target.value)} type={!passStatus2 ? 'text' : 'password'} placeholder='Укажите пароль' />
                         </div>
                     </div>
                     <h6 style={{ display: passwordValue.length < 8 && passwordValue.length != 0 ? 'block' : 'none' }} className='password-error' >Пароль должен минимум содержать 8 символов</h6>
@@ -68,7 +77,7 @@ function SignUp() {
                         <h6>Уже есть аккаунт ?</h6> <Link to={'/signIn'} >Войти</Link>
                     </div>
                 </div>
-                <button style={emailValue && password2Value && passwordValue ? activeButtonCSS : null} onClick={() => submitSign()} >Зарегистрироваться</button>
+                <button style={emailValue && password2Value.length >= 8 && passwordValue.length >= 8 ? activeButtonCSS : null} onClick={() => submitSign()} >Зарегистрироваться</button>
                 <p>Продолжая, вы принимаете наши <span>Условия предоставления услуг и Политику конфиденциальности.</span></p>
             </div>
         </div>

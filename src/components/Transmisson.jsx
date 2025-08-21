@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
 
 function Transmisson({ checkedTransmission, setCheckedTransmission }) {
-    let [isOpen, setIsOpen] = useState(true)
+    let [isOpen, setIsOpen] = useState(false)
     let inp1 = useRef()
     let inp2 = useRef()
     console.log(checkedTransmission);

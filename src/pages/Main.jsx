@@ -1,13 +1,18 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IoCarSharp } from 'react-icons/io5'
 import { MdFlight } from 'react-icons/md'
 import { BiHotel } from 'react-icons/bi'
 import Question from '../components/Question'
 import { AllContext } from '../context/DataContext'
 function Main() {
-    let {user} = useContext(AllContext)
-    
+    let { setToPlace } = useContext(AllContext)
+    let navigate = useNavigate()
+    function go() {
+        setToPlace('Везьде')
+        navigate('flights')
+    }
+
     let img1 = 'assets/image.png'
     let img2 = 'assets/image2.png'
     let question = [
@@ -62,30 +67,23 @@ function Main() {
             <div className='container'>
                 <main>
                     <div className="links">
-                        <Link>
-                            <div>
-                                <BiHotel color='white' size={25} />
-                                <p>Отели</p>
-                            </div>
-                        </Link>
-                        <Link>
-                            <div>
-                                <IoCarSharp color='white' size={25} />
-                                <p>Прокат автомобилей</p>
-                            </div>
-                        </Link>
-                        <Link>
-                            <div>
-
-                                <MdFlight color='white' size={25} />
-                                <p>Поиск везьде</p>
-                            </div>
-                        </Link>
+                        <div>
+                            <BiHotel color='white' size={25} />
+                            <p>Отели</p>
+                        </div>
+                        <div onClick={() => navigate('/carhire') } >
+                            <IoCarSharp color='white' size={25} />
+                            <p>Прокат автомобилей</p>
+                        </div>
+                        <div onClick={go}  >
+                            <MdFlight color='white' size={25} />
+                            <p>Поиск везьде</p>
+                        </div>
                     </div>
-                    <div className='main-img' style={{background:`url(${window.innerWidth > 550 ? img1 : img2})` , backgroundSize:"cover"}} >
+                    <div className='main-img' style={{ background: `url(${window.innerWidth > 550 ? img1 : img2})`, backgroundSize: "cover" }} >
                         <p>Не можете определиться?</p>
                         <h2>Вам открыты любые дороги</h2>
-                        <button>Искать везьде</button>
+                        <button onClick={go} >Искать везьде</button>
                     </div>
                     <div className='question-section'>
                         <h3>Бронирование авиабилетов на Skyscanner</h3>

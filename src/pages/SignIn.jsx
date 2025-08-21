@@ -4,6 +4,7 @@ import { signIn } from '../services/flightServices'
 import toast from 'react-hot-toast'
 import { useContext } from 'react'
 import { AllContext } from '../context/DataContext'
+import { FaEye, FaEyeSlash } from 'react-icons/fa'
 
 function SignIn() {
   let navigate = useNavigate()
@@ -11,6 +12,7 @@ function SignIn() {
   let activeButtonCSS = { color: "white", background: "#0062e3" }
   let [emailValue, setEmailValue] = useState('')
   let [passwordValue, setPasswordValue] = useState('')
+  let [passStatus1, setPassStatus1] = useState(false)
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
@@ -49,18 +51,21 @@ function SignIn() {
         <div className='signInputBox'>
           <div className='signInput'>
             <p>Адрес электронной почты</p>
-            <input onChange={(e) => setEmailValue(e.target.value)} type="text" placeholder='Укажите адрес своей электронной почты' />
+            <input onChange={(e) => setEmailValue(e.target.value)} type='text' placeholder='Укажите адрес своей электронной почты' />
           </div>
-          <div className='signInput' >
+          <div style={{gap:'6px'}} className='signInput' >
+            <div onClick={() => setPassStatus1(!passStatus1) } >
+              {passStatus1 ? <FaEye fill='#161616' /> : <FaEyeSlash fill='#161616' />}
+            </div>
             <p>Пароль</p>
-            <input onChange={(e) => setPasswordValue(e.target.value)} type="text" placeholder='Укажите пароль' />
+            <input onChange={(e) => setPasswordValue(e.target.value)} type={!passStatus1 ? 'text' : 'password'} placeholder='Укажите пароль' />
           </div>
           <h6 style={{ display: passwordValue.length < 8 && passwordValue.length != 0 ? 'block' : 'none' }} className='password-error' >Пароль должен минимум содержать 8 символов</h6>
           <div className='link' >
             <h6>Нет аккаунта ?</h6> <Link to={'/signUp'} >Зарегистрироваться</Link>
           </div>
         </div>
-        <button style={emailValue && passwordValue ? activeButtonCSS : null} onClick={() => submitSign()} >Войти</button>
+        <button style={emailValue && passwordValue.length >= 8 ? activeButtonCSS : null} onClick={() => submitSign()} >Войти</button>
         <p>Продолжая, вы принимаете наши <span>Условия предоставления услуг и Политику конфиденциальности.</span></p>
       </div>
     </div>

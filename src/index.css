@@ -125,11 +125,9 @@ main {
     overflow-y: scroll;
 }
 
-.links a {
-    flex: 1;
-}
 
-.links a div {
+.links div {
+    flex: 1;
     display: flex;
     gap: 18px;
     color: white;
@@ -139,9 +137,10 @@ main {
     border-radius: 15px;
     font: 600 14px 'Inter';
     transition: .3s;
+    cursor: pointer;
 }
 
-.links a div:hover {
+.links div:hover {
     background-color: #1a4a7e;
 }
 
@@ -1585,7 +1584,7 @@ input[type="checkBox"] {
     padding: 0 20px;
 }
 
-.signUpPage svg {
+.signUpPage a svg {
     width: 234px;
 }
 
@@ -1636,12 +1635,18 @@ input[type="checkBox"] {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    position: relative;
 }
 
 .signInput p {
     font: 700 11px 'Inter';
 }
-
+.signInput > div {
+    position: absolute;
+    top: 55%;
+    cursor: pointer;
+    right: 13px;
+}
 .signInput input {
     border: 1px solid #9ea2a7;
     padding: 13px 15px;
@@ -2580,7 +2585,7 @@ input[type="checkBox"] {
         flex-direction: column;
     }
 
-    .links a div {
+    .links div {
         flex-direction: column;
         align-items: start;
         justify-content: space-between;

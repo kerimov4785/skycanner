@@ -3,10 +3,10 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa6'
 import CheckCompany from './CheckCompany'
 
 function Company({ allCompany, checkedCompany, setCheckedCompany }) {
-    let [isOpen, setIsOpen] = useState(true)
+    let [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className='company-box' style={{ height: !isOpen ? "40px" : `${86 + (45 * allCompany.length) - 20}px` }} >
+        <div className='company-box' style={{ height: !isOpen ? "40px" : `${86 + (48 * allCompany.length) - 20}px` }} >
             <div className='filter-title' onClick={() => setIsOpen(!isOpen)} >
                 <h4>Прокатчик</h4>
                 {isOpen ? <FaAngleUp /> : <FaAngleDown />}
