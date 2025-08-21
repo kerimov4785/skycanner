@@ -99,7 +99,7 @@ function Tickets() {
                             <div className='ticket-box'>
                                 {filteredAllTicket.length != 0 ? filteredAllTicket
                                     .map(item =>
-                                        tripType == 'Туда-обратно' ? <Ticket2Way title1={title1} title2={title2} key={item.id} ticketInfo={item} /> : <Ticket1Way title1={title1} title2={title2} key={item.id} ticketInfo={item} />
+                                        tripType == 'Туда-обратно' ? <Ticket2Way toCity={toCity} toCountry={toCountry} title1={title1} title2={title2} key={item.id} ticketInfo={item} /> : <Ticket1Way toCity={toCity} toCountry={toCountry} title1={title1} title2={title2} key={item.id} ticketInfo={item} />
                                     ) : <div className='none' ><h3>No flights found for these requests :(</h3></div>}
                             </div>
                         </div>

@@ -3,17 +3,23 @@ import { FaArrowRight, FaHeart, FaRegHeart } from 'react-icons/fa';
 import { IoAirplane } from "react-icons/io5";
 import { AllContext } from '../context/DataContext';
 import { addLiked, getLiked } from '../services/flightServices';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 
-function Ticket2Way({ title1, title2, ticketInfo }) {
+function Ticket2Way({toCity, toCountry, title1, title2, ticketInfo }) {
+  let location = useLocation()
   let departureTime = ticketInfo.departure.slice(11)
   let arrivalTime = ticketInfo.arrival.slice(11)
   let roundDepartureTime = ticketInfo.roundTrip.departure.slice(11)
   let roundArrivalTime = ticketInfo.roundTrip.arrival.slice(11)
   let navigate = useNavigate()
   let { user, likedTickets, setLikedTickets } = useContext(AllContext)
+
+  function goToDetail(id) {
+    console.log(id)
+    navigate(`${location.pathname}${id}?country=${toCountry}&&city=${toCity}&&title1=${title1}&&title2=${title2}`)
+  }
 
   function toLike(ticket) {
     if (!user.email) {
@@ -100,7 +106,7 @@ function Ticket2Way({ title1, title2, ticketInfo }) {
       </div>
       <div className='card-col-2' >
         <h3 className='ticket-price'>{ticketInfo.price} ₼</h3>
-        <button>Посмотреть <FaArrowRight /> </button>
+        <button onClick={() => goToDetail(ticketInfo.id)} >Посмотреть <FaArrowRight /> </button>
       </div>
       <div className='like' onClick={() => toLike(ticketInfo)}  >
         {user.id ? likedTickets.some(item => item.id == ticketInfo.id) ? <FaHeart size={21} color='#0062e3' /> : <FaRegHeart size={21} /> : <FaRegHeart size={21} />}

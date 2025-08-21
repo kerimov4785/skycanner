@@ -14,6 +14,7 @@ import Profile from "./pages/Profile"
 import Saved from "./pages/Saved"
 import Error from "./pages/Error"
 import Results from "./pages/Results"
+import Details from "./pages/Details"
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path='signUp' element={<SignUp /> } />
         <Route path='signIn' element={<SignIn /> } />
         <Route path='*' element={<Error />} />
+        <Route path='/flights/transport/tickets/:ID' element={<Details />} />
       </Routes>
     </>
   )
