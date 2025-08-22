@@ -68,6 +68,12 @@ function FlightFilter() {
     let toBox = useRef(null)
     let navigate = useNavigate()
 
+    useEffect(() => {
+        if(mobileTo , mobileFrom , mobileDate){
+            window.scrollTo(0,70)
+        }
+    },[mobileTo , mobileFrom , mobileDate])
+
     window.addEventListener('click', function (e) {
         if (e.target != date1Box.current && e.target != date1P.current && e.target != date1H5.current) {
             setDatePicker1(false)
