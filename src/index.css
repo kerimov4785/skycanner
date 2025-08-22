@@ -1660,7 +1660,7 @@ input[type="checkBox"] {
 }
 .signInput input {
     border: 1px solid #9ea2a7;
-    padding: 13px 15px;
+    padding: 13px 35px 13px 15px ;
     border-radius: 15px;
     font: 400 16px 'Inter';
     outline: none;
