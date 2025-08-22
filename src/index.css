@@ -3063,4 +3063,7 @@ input[type="checkBox"] {
         width: 33px;
         height: 33px;
     }
+    .last-box h5{
+        width: 90px;
+    }
 }

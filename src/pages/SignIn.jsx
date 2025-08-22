@@ -12,7 +12,7 @@ function SignIn() {
   let activeButtonCSS = { color: "white", background: "#0062e3" }
   let [emailValue, setEmailValue] = useState('')
   let [passwordValue, setPasswordValue] = useState('')
-  let [passStatus1, setPassStatus1] = useState(false)
+  let [passStatus1, setPassStatus1] = useState(true)
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
