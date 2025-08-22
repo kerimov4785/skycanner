@@ -616,7 +616,7 @@ input[type="checkBox"] {
 }
 
 .buttonSaveDate {
-    position: absolute;
+    position: fixed;
     right: 20px;
     bottom: 15px;
     font: 400 14px 'Inter';
