@@ -19,11 +19,11 @@ function DataContext({ children }) {
     let [user, setUser] = useState(null)
     let [likedTickets, setLikedTickets] = useState([])
 
-    let [fromPlaceCar,setFromPlaceCar] = useState('')
-    let [date1Car , setDate1Car ] = useState('')
-    let [date2Car , setDate2Car ] = useState('')
-    let [time1Car , setTime1Car] = useState('')
-    let [time2Car , setTime2Car] = useState('')
+    let [fromPlaceCar, setFromPlaceCar] = useState('')
+    let [date1Car, setDate1Car] = useState('')
+    let [date2Car, setDate2Car] = useState('')
+    let [time1Car, setTime1Car] = useState('')
+    let [time2Car, setTime2Car] = useState('')
 
     let questions = [
         {
@@ -85,12 +85,8 @@ function DataContext({ children }) {
     useEffect(() => {
         getAllFlights()
             .then((item) => setFlights(item))
-    }, [])
-    useEffect(() => {
         getAllCars()
             .then((item) => setCars(item))
-    },[])
-    useEffect(() => {
         setUser(JSON.parse(localStorage['user'] || '{}'))
     }, [])
     useEffect(() => {
