@@ -2343,15 +2343,24 @@ input[type="checkBox"] {
 .header1-dt{
     padding: 15px 0;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     background-color: var(--darkblue);
-    display: flex;
-    justify-content: center;
     z-index: 3;
 }
-.header1-dt svg{
+.header1-dt > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.header1-dt svg:last-child{
     width: 120px;
+    cursor: pointer;
+}
+#backIcon{
+    position: absolute;
+    left: 7px;
+    cursor: pointer;
 }
 .header2-dt{
     background-color: var(--darkblue);

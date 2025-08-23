@@ -36,7 +36,7 @@ function SignIn() {
         (toast.success('Welcome'),
           localStorage['user'] = JSON.stringify(data[0]),
           setUser(data[0]),
-          navigate('/'))
+          navigate(-1))
         : toast.error('Password or Email is not correct')
     )
   }
